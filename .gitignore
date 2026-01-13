@@ -1,0 +1,39 @@
+# Archivos de configuración sensibles
+.env
+
+# Guías y documentación (privadas)
+guias/
+
+# Scripts internos
+scripts/
+
+# Imágenes descargadas
+images_downloaded/
+
+# Node modules
+node_modules/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporales
+*.tmp
+*.temp
+tmpclaude-*
+
+# Backups
+*.backup
+*.bak
