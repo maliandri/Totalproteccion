@@ -70,6 +70,39 @@ totalproteccion/
 
 ---
 
+## 🚀 Deploy en Netlify
+
+### Opción 1: Deploy desde Git (Recomendado)
+
+1. Ve a [Netlify](https://app.netlify.com)
+2. Click en "Add new site" → "Import an existing project"
+3. Conecta con GitHub y selecciona el repositorio `Totalproteccion`
+4. Configuración automática (ya está en netlify.toml):
+   - **Build command:** (vacío)
+   - **Publish directory:** `.`
+5. Click en "Deploy site"
+
+### Opción 2: Deploy Manual
+
+```bash
+# Instalar Netlify CLI
+npm install -g netlify-cli
+
+# Deploy
+netlify deploy --prod
+```
+
+El sitio estará disponible en: `https://tu-sitio.netlify.app`
+
+### Configurar dominio personalizado
+
+En Netlify dashboard:
+1. Domain settings → Add custom domain
+2. Agrega `totalproteccion.com.ar`
+3. Configura los DNS según las instrucciones de Netlify
+
+---
+
 ## 📄 Licencia
 
 © 2025 Total Protección. Todos los derechos reservados.
