@@ -6,7 +6,24 @@ Sitio web inspirado en [Melisam Fire Group](https://melisam.com/) para **Total P
 
 ## 🚀 Inicio Rápido
 
-Simplemente abre `index.html` en tu navegador para ver el sitio.
+### Desarrollo local
+
+```bash
+# Instalar dependencias (solo la primera vez)
+npm install
+
+# Iniciar servidor de desarrollo con live-reload
+npm run dev
+
+# O también puedes usar
+npm start
+```
+
+El sitio se abrirá automáticamente en http://localhost:3000
+
+### Alternativa: Abrir directamente
+
+También puedes simplemente abrir `index.html` en tu navegador.
 
 ---
 
