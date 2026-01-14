@@ -1,0 +1,48 @@
+import type { Metadata } from 'next'
+import './globals.css'
+
+export const metadata: Metadata = {
+  title: 'Total Protección | Soluciones Integrales en Protección Contra Incendio',
+  description: 'Empresa líder en Argentina especializada en sistemas de protección contra incendios. Venta, instalación y mantenimiento de extintores, detectores de humo, y sistemas automáticos.',
+  keywords: 'protección contra incendios, extintores, detectores de humo, sistemas contra incendio, matafuegos, rociadores automáticos, Argentina',
+  authors: [{ name: 'Total Protección' }],
+  creator: 'Total Protección',
+  publisher: 'Total Protección',
+  robots: 'index, follow',
+  openGraph: {
+    type: 'website',
+    locale: 'es_AR',
+    url: 'https://totalproteccion.com.ar',
+    siteName: 'Total Protección',
+    title: 'Total Protección | Soluciones en Protección Contra Incendio',
+    description: 'Empresa líder en sistemas de protección contra incendios en Argentina.',
+    images: [
+      {
+        url: '/logos/Logo-Melisam.png',
+        width: 701,
+        height: 143,
+        alt: 'Total Protección Logo',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Total Protección | Protección Contra Incendio',
+    description: 'Sistemas de protección contra incendios en Argentina',
+    images: ['/logos/Logo-Melisam.png'],
+  },
+  viewport: 'width=device-width, initial-scale=1',
+  themeColor: '#1a365d',
+}
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
+  return (
+    <html lang="es">
+      <body>{children}</body>
+    </html>
+  )
+}

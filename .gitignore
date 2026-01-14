@@ -14,6 +14,12 @@ images_downloaded/
 node_modules/
 package-lock.json
 
+# Next.js
+.next/
+out/
+build/
+dist/
+
 # Logs
 *.log
 npm-debug.log*
@@ -30,11 +36,12 @@ desktop.ini
 *.swo
 *~
 
-# Temporales
+# Temporales Claude Code
 *.tmp
 *.temp
 *-cwd
-tmpclaude-*
+tmpclaude*
+.claude-code-*
 
 # Backups
 *.backup

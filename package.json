@@ -2,21 +2,34 @@
   "name": "totalproteccion",
   "version": "1.0.0",
   "description": "Sitio web de Total Protección - Soluciones Integrales en Protección Contra Incendio",
-  "main": "index.html",
+  "private": true,
   "scripts": {
-    "dev": "live-server --port=3000 --host=localhost --open=/",
-    "start": "live-server --port=3000 --host=localhost --open=/",
-    "build": "echo 'Build completo! El sitio está listo para deployment' && echo 'Archivos listos en la raíz del proyecto'"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "^14.2.0",
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0",
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.4.0",
+    "tailwindcss": "^3.4.0",
+    "typescript": "^5.0.0"
   },
   "keywords": [
     "proteccion-incendios",
     "fire-protection",
-    "melisam",
-    "total-proteccion"
+    "total-proteccion",
+    "next.js",
+    "react"
   ],
   "author": "Total Protección",
-  "license": "ISC",
-  "devDependencies": {
-    "live-server": "^1.2.2"
-  }
+  "license": "ISC"
 }
