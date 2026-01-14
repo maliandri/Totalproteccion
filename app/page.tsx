@@ -1,195 +1,411 @@
+'use client'
+
 import Image from 'next/image'
+import { useState } from 'react'
 
 export default function Home() {
+  const [currentSlide, setCurrentSlide] = useState(0)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
+  const slides = [
+    {
+      image: '/slider/slider-mobile-mfg-soluciones-contra-incendio-1-1.webp',
+      title: 'Melisam Fire Group es Distribuidor',
+      subtitle: 'Exclusivo Amerex en Argentina.',
+    },
+    {
+      image: '/slider/slider-mobile-amerext.jpg',
+      title: 'Distribuidor Exclusivo Amerex',
+      subtitle: 'Líder en protección contra incendios',
+    },
+    {
+      image: '/slider/slider-mobile-ing.jpg',
+      title: 'Ingeniería y Diseño',
+      subtitle: 'Soluciones personalizadas',
+    },
+    {
+      image: '/slider/slider-mobile-ext.jpg',
+      title: 'Extintores Profesionales',
+      subtitle: 'Máxima calidad y seguridad',
+    },
+  ]
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % slides.length)
+  }
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)
+  }
+
   return (
-    <main className="min-h-screen">
-      {/* Header */}
-      <header className="bg-white shadow-md fixed w-full top-0 z-50">
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center">
-            <Image
-              src="/logos/Logo-Melisam.png"
-              alt="Total Protección"
-              width={200}
-              height={40}
-              className="h-10 w-auto"
-            />
+    <main className="min-h-screen bg-white">
+      {/* Header Negro */}
+      <header className="bg-[#1a1a1a] text-white fixed w-full top-0 z-50 shadow-lg">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-between h-20">
+            {/* Logo */}
+            <div className="flex items-center">
+              <Image
+                src="/logos/Logo-Melisam.png"
+                alt="Melisam Fire Group"
+                width={200}
+                height={40}
+                className="h-12 w-auto"
+              />
+            </div>
+
+            {/* Desktop Navigation */}
+            <nav className="hidden lg:flex items-center space-x-8">
+              <a href="#inicio" className="hover:text-red-500 transition text-sm font-medium">Inicio</a>
+              <a href="#empresa" className="hover:text-red-500 transition text-sm font-medium">Empresa</a>
+              <a href="#productos" className="hover:text-red-500 transition text-sm font-medium">Productos</a>
+              <div className="relative group">
+                <a href="#sistemas" className="hover:text-red-500 transition text-sm font-medium flex items-center">
+                  Sistemas contra Incendios
+                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </a>
+              </div>
+              <a href="#certificaciones" className="hover:text-red-500 transition text-sm font-medium">Certificaciones</a>
+              <div className="relative group">
+                <a href="#capacitaciones" className="hover:text-red-500 transition text-sm font-medium flex items-center">
+                  Capacitaciones
+                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </a>
+              </div>
+              <a href="#clientes" className="hover:text-red-500 transition text-sm font-medium">Clientes</a>
+              <a href="#contacto" className="hover:text-red-500 transition text-sm font-medium">Contacto</a>
+              <a href="#rrhh" className="hover:text-red-500 transition text-sm font-medium">RRHH</a>
+              <a href="#rse" className="hover:text-red-500 transition text-sm font-medium">RSE</a>
+            </nav>
+
+            {/* Mobile Menu Button */}
+            <button
+              className="lg:hidden text-white"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
           </div>
-
-          <nav className="hidden md:flex space-x-6">
-            <a href="#inicio" className="text-gray-700 hover:text-primary">Inicio</a>
-            <a href="#empresa" className="text-gray-700 hover:text-primary">Empresa</a>
-            <a href="#productos" className="text-gray-700 hover:text-primary">Productos</a>
-            <a href="#servicios" className="text-gray-700 hover:text-primary">Servicios</a>
-            <a href="#certificaciones" className="text-gray-700 hover:text-primary">Certificaciones</a>
-            <a href="#contacto" className="text-gray-700 hover:text-primary">Contacto</a>
-          </nav>
-
-          <button className="md:hidden">
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </button>
         </div>
+
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
+          <div className="lg:hidden bg-[#252525] border-t border-gray-700">
+            <nav className="container mx-auto px-4 py-4 flex flex-col space-y-3">
+              <a href="#inicio" className="hover:text-red-500 transition py-2">Inicio</a>
+              <a href="#empresa" className="hover:text-red-500 transition py-2">Empresa</a>
+              <a href="#productos" className="hover:text-red-500 transition py-2">Productos</a>
+              <a href="#sistemas" className="hover:text-red-500 transition py-2">Sistemas contra Incendios</a>
+              <a href="#certificaciones" className="hover:text-red-500 transition py-2">Certificaciones</a>
+              <a href="#capacitaciones" className="hover:text-red-500 transition py-2">Capacitaciones</a>
+              <a href="#clientes" className="hover:text-red-500 transition py-2">Clientes</a>
+              <a href="#contacto" className="hover:text-red-500 transition py-2">Contacto</a>
+            </nav>
+          </div>
+        )}
       </header>
 
-      {/* Hero Section */}
-      <section className="pt-20 bg-gradient-to-r from-primary to-primary-light text-white">
-        <div className="container mx-auto px-4 py-24">
-          <div className="max-w-3xl">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Total Protección
-            </h1>
-            <p className="text-xl md:text-2xl mb-8">
-              Soluciones Integrales en Protección Contra Incendio
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <a href="#contacto" className="bg-secondary hover:bg-secondary-dark text-white px-8 py-3 rounded-lg font-semibold transition">
-                Contáctanos
-              </a>
-              <a href="#servicios" className="bg-white text-primary hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition">
-                Nuestros Servicios
-              </a>
+      {/* Hero Slider */}
+      <section className="relative h-[600px] mt-20 overflow-hidden">
+        {slides.map((slide, index) => (
+          <div
+            key={index}
+            className={`absolute inset-0 transition-opacity duration-700 ${
+              index === currentSlide ? 'opacity-100' : 'opacity-0'
+            }`}
+          >
+            <div className="relative h-full bg-gradient-to-r from-gray-800 to-gray-600">
+              <Image
+                src={slide.image}
+                alt={slide.title}
+                fill
+                className="object-cover opacity-50"
+              />
+              <div className="absolute inset-0 bg-black/40" />
+
+              {/* Content */}
+              <div className="relative container mx-auto px-4 h-full flex items-center">
+                <div className="max-w-2xl text-white">
+                  <div className="flex items-center gap-4 mb-6">
+                    <Image
+                      src="/logos/Logo-Melisam.png"
+                      alt="Melisam"
+                      width={180}
+                      height={36}
+                      className="h-10 w-auto"
+                    />
+                    <Image
+                      src="/logos/logo-amerex.png"
+                      alt="Amerex"
+                      width={140}
+                      height={44}
+                      className="h-12 w-auto"
+                    />
+                  </div>
+                  <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
+                    {slide.title}
+                  </h1>
+                  <p className="text-xl md:text-2xl mb-8 text-gray-200">
+                    {slide.subtitle}
+                  </p>
+                  <button className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded text-lg font-semibold transition">
+                    HACEMOS TU CONSULTA
+                  </button>
+                </div>
+              </div>
             </div>
+          </div>
+        ))}
+
+        {/* Slider Controls */}
+        <button
+          onClick={prevSlide}
+          className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full transition z-10"
+        >
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+        <button
+          onClick={nextSlide}
+          className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full transition z-10"
+        >
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+
+        {/* Dots */}
+        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+          {slides.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentSlide(index)}
+              className={`w-3 h-3 rounded-full transition ${
+                index === currentSlide ? 'bg-red-600' : 'bg-white/50'
+              }`}
+            />
+          ))}
+        </div>
+      </section>
+
+      {/* Certificaciones Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+            Calidad Certificada con Alcance Integral
+          </h2>
+
+          <div className="mt-12 flex flex-wrap justify-center items-center gap-8">
+            <Image src="/9001-150x150.jpg" alt="ISO 9001" width={120} height={120} className="grayscale hover:grayscale-0 transition" />
+            <Image src="/14001-150x150.jpg" alt="ISO 14001" width={120} height={120} className="grayscale hover:grayscale-0 transition" />
+            <Image src="/logos/logo-certificaciones-01-150x150.jpg" alt="IRAM" width={120} height={120} className="grayscale hover:grayscale-0 transition" />
+            <Image src="/logos/logo-certificaciones-02-150x150.jpg" alt="IRAM" width={120} height={120} className="grayscale hover:grayscale-0 transition" />
+            <Image src="/logos/logo-certificaciones-05-150x150.jpg" alt="NFPA" width={120} height={120} className="grayscale hover:grayscale-0 transition" />
+            <Image src="/logos/logo-certificaciones-06-150x150.jpg" alt="Bureau Veritas" width={120} height={120} className="grayscale hover:grayscale-0 transition" />
+            <Image src="/logos/Logo-CAS-150x150.jpg" alt="CAS" width={120} height={120} className="grayscale hover:grayscale-0 transition" />
+            <Image src="/logos/logo-certificaciones-13-150x150.jpg" alt="ODS" width={120} height={120} className="grayscale hover:grayscale-0 transition" />
           </div>
         </div>
       </section>
 
-      {/* Services Section */}
-      <section id="servicios" className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12 text-primary">Nuestros Servicios</h2>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition">
+      {/* 4 Services Cards con colores */}
+      <section className="py-0">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4">
+          {/* Azul - Ingeniería */}
+          <div className="relative h-96 bg-[#003d82] text-white overflow-hidden group">
+            <div className="absolute inset-0 bg-black/20" />
+            <div className="relative z-10 p-8 h-full flex flex-col justify-end">
               <Image
                 src="/services/melisam-ingenieria@3x-8-1024x211.png"
-                alt="Ingeniería"
-                width={400}
-                height={82}
-                className="w-full h-auto mb-6"
+                alt="Melisam Ingeniería"
+                width={250}
+                height={51}
+                className="mb-6"
               />
-              <h3 className="text-2xl font-bold mb-4 text-primary">Ingeniería</h3>
-              <p className="text-gray-600">
-                Diseño y desarrollo de proyectos de protección contra incendios con los más altos estándares de calidad.
-              </p>
+              <h3 className="text-2xl font-bold mb-4">Instalaciones fijas</h3>
+              <p className="text-lg mb-6">contra incendio llave en mano.</p>
+              <button className="bg-[#0051a8] hover:bg-[#003d82] text-white px-6 py-2 rounded w-fit transition">
+                Ver más
+              </button>
             </div>
+          </div>
 
-            <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition">
+          {/* Rojo - Extintores */}
+          <div className="relative h-96 bg-[#c41e3a] text-white overflow-hidden group">
+            <div className="absolute inset-0 bg-black/20" />
+            <div className="relative z-10 p-8 h-full flex flex-col justify-end">
               <Image
                 src="/services/melisam-extintores@3x-8-1024x211.png"
-                alt="Extintores"
-                width={400}
-                height={82}
-                className="w-full h-auto mb-6"
+                alt="Melisam Extintores"
+                width={250}
+                height={51}
+                className="mb-6"
               />
-              <h3 className="text-2xl font-bold mb-4 text-primary">Extintores</h3>
-              <p className="text-gray-600">
-                Venta e instalación de extintores de última generación para todo tipo de industrias.
-              </p>
+              <h3 className="text-2xl font-bold mb-4">Fabricación de</h3>
+              <p className="text-lg mb-6">extintores de todo tipo y capacidad.</p>
+              <button className="bg-[#a01829] hover:bg-[#8a1423] text-white px-6 py-2 rounded w-fit transition">
+                Ver más
+              </button>
             </div>
+          </div>
 
-            <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition">
+          {/* Amarillo - Mantenimiento */}
+          <div className="relative h-96 bg-[#f7b500] text-white overflow-hidden group">
+            <div className="absolute inset-0 bg-black/20" />
+            <div className="relative z-10 p-8 h-full flex flex-col justify-end">
               <Image
                 src="/services/melisam-mantenimiento@3x-8-1024x210.png"
-                alt="Mantenimiento"
-                width={400}
-                height={82}
-                className="w-full h-auto mb-6"
+                alt="Melisam Mantenimiento"
+                width={250}
+                height={51}
+                className="mb-6"
               />
-              <h3 className="text-2xl font-bold mb-4 text-primary">Mantenimiento</h3>
-              <p className="text-gray-600">
-                Mantenimiento preventivo y correctivo de sistemas de protección contra incendios.
-              </p>
+              <h3 className="text-2xl font-bold mb-4">Mantenimiento</h3>
+              <p className="text-lg mb-6">IFCI</p>
+              <button className="bg-[#d49a00] hover:bg-[#b88500] text-white px-6 py-2 rounded w-fit transition">
+                Ver más
+              </button>
+            </div>
+          </div>
+
+          {/* Verde - Máquinas */}
+          <div className="relative h-96 bg-[#00a651] text-white overflow-hidden group">
+            <div className="absolute inset-0 bg-black/20" />
+            <div className="relative z-10 p-8 h-full flex flex-col justify-end">
+              <Image
+                src="/services/melisam-fire-group@3x-8-scaled-1-1024x210.png"
+                alt="Melisam Máquinas"
+                width={250}
+                height={51}
+                className="mb-6"
+              />
+              <h3 className="text-2xl font-bold mb-4">Máquinas para</h3>
+              <p className="text-lg mb-6">talleres de mantenimiento de extintores.</p>
+              <button className="bg-[#008a44] hover:bg-[#007038] text-white px-6 py-2 rounded w-fit transition">
+                Ver más
+              </button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Certifications Section */}
-      <section id="certificaciones" className="py-20 bg-white">
+      {/* Productos Section con cards negras */}
+      <section id="productos" className="py-20 bg-gray-100">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12 text-primary">Certificaciones</h2>
+          <div className="text-center mb-4">
+            <p className="text-red-600 font-semibold text-sm uppercase tracking-wide">CATEGORÍAS</p>
+          </div>
+          <h2 className="text-4xl font-bold text-center mb-16">Nuestros Productos</h2>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
-            {[
-              '9001-150x150.jpg',
-              '14001-150x150.jpg',
-              '45001-150x150.jpg',
-              'logo-certificaciones-01-150x150.jpg',
-              'logo-certificaciones-02-150x150.jpg',
-              'logo-certificaciones-03-150x150.jpg',
-            ].map((cert, index) => (
-              <div key={index} className="bg-gray-50 p-4 rounded-lg flex items-center justify-center hover:shadow-lg transition">
-                <Image
-                  src={`/${cert}`}
-                  alt={`Certificación ${index + 1}`}
-                  width={150}
-                  height={150}
-                  className="w-full h-auto"
-                />
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Card 1 - Mangueras */}
+            <div className="bg-black text-white rounded-lg overflow-hidden group cursor-pointer hover:scale-105 transition-transform duration-300">
+              <div className="relative h-64">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10" />
+                <div className="absolute bottom-0 left-0 right-0 p-6 z-20">
+                  <h3 className="text-2xl font-bold">Mangueras</h3>
+                  <p className="text-lg">de Incendio</p>
+                </div>
               </div>
-            ))}
+            </div>
+
+            {/* Card 2 - Matafuegos */}
+            <div className="bg-black text-white rounded-lg overflow-hidden group cursor-pointer hover:scale-105 transition-transform duration-300">
+              <div className="relative h-64">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10" />
+                <div className="absolute bottom-0 left-0 right-0 p-6 z-20">
+                  <h3 className="text-2xl font-bold">Matafuegos</h3>
+                </div>
+              </div>
+            </div>
+
+            {/* Card 3 - Broncería */}
+            <div className="bg-black text-white rounded-lg overflow-hidden group cursor-pointer hover:scale-105 transition-transform duration-300">
+              <div className="relative h-64">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10" />
+                <div className="absolute bottom-0 left-0 right-0 p-6 z-20">
+                  <h3 className="text-2xl font-bold">Broncería</h3>
+                  <p className="text-lg">para incendio</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Card 4 - Máquinas */}
+            <div className="bg-black text-white rounded-lg overflow-hidden group cursor-pointer hover:scale-105 transition-transform duration-300">
+              <div className="relative h-64">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10" />
+                <div className="absolute bottom-0 left-0 right-0 p-6 z-20">
+                  <h3 className="text-2xl font-bold">Máquinas para</h3>
+                  <p className="text-lg">Talleres de Recarga</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Card 5 - Gabinetes */}
+            <div className="bg-black text-white rounded-lg overflow-hidden group cursor-pointer hover:scale-105 transition-transform duration-300">
+              <div className="relative h-64">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10" />
+                <div className="absolute bottom-0 left-0 right-0 p-6 z-20">
+                  <h3 className="text-2xl font-bold">Gabinetes</h3>
+                  <p className="text-lg">para mangueras y extintores</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Card 6 - Espumas */}
+            <div className="bg-black text-white rounded-lg overflow-hidden group cursor-pointer hover:scale-105 transition-transform duration-300">
+              <div className="relative h-64">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10" />
+                <div className="absolute bottom-0 left-0 right-0 p-6 z-20">
+                  <h3 className="text-2xl font-bold">Espumas</h3>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Clients Section */}
-      <section id="clientes" className="py-20 bg-gray-50">
+      {/* Servicios Section con imágenes grandes */}
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12 text-primary">Nuestros Clientes</h2>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8">
-            {[
-              'logos/imgi_30_logo-coca-cola-min.png',
-              'logos/logo-ford-scale-300x226.png',
-              'logos/imgi_75_logo-mercado-libre-min.png',
-              'logos/imgi_127_logo-ypf-min-1-1.png',
-              'logos/imgi_99_logo-quilmes-min.png',
-              'logos/imgi_113_logo-telefonica-min-1.png',
-              'metrovias-min.png',
-              'logos/imgi_32_logo-correo-arg-min-1.png',
-            ].map((client, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg flex items-center justify-center hover:shadow-lg transition">
-                <Image
-                  src={`/${client}`}
-                  alt={`Cliente ${index + 1}`}
-                  width={120}
-                  height={80}
-                  className="w-full h-auto object-contain"
-                />
-              </div>
-            ))}
+          <div className="text-center mb-4">
+            <p className="text-red-600 font-semibold text-sm uppercase tracking-wide">CATEGORÍAS</p>
           </div>
-        </div>
-      </section>
+          <h2 className="text-4xl font-bold text-center mb-16">Nuestros Servicios</h2>
 
-      {/* Contact Section */}
-      <section id="contacto" className="py-20 bg-primary text-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold mb-6">Contactanos</h2>
-            <p className="text-xl mb-8">
-              Estamos aquí para ayudarte con todas tus necesidades de protección contra incendios
-            </p>
-
-            <div className="grid md:grid-cols-3 gap-8 mt-12">
-              <div>
-                <div className="text-4xl mb-4">📞</div>
-                <h3 className="text-xl font-bold mb-2">Teléfono</h3>
-                <p>+54 11 1234-5678</p>
+          <div className="grid md:grid-cols-3 gap-6">
+            {/* Servicio 1 - Extinción */}
+            <div className="relative h-80 rounded-lg overflow-hidden group cursor-pointer">
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent z-10" />
+              <div className="absolute bottom-0 left-0 right-0 p-8 z-20 text-white">
+                <h3 className="text-3xl font-bold mb-2">Sistemas de Extinción</h3>
+                <p className="text-xl mb-4">Contra Incendios</p>
               </div>
+            </div>
 
-              <div>
-                <div className="text-4xl mb-4">📧</div>
-                <h3 className="text-xl font-bold mb-2">Email</h3>
-                <p>info@totalproteccion.com.ar</p>
+            {/* Servicio 2 - Detección */}
+            <div className="relative h-80 rounded-lg overflow-hidden group cursor-pointer">
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent z-10" />
+              <div className="absolute bottom-0 left-0 right-0 p-8 z-20 text-white">
+                <h3 className="text-3xl font-bold mb-2">Sistemas de Detección</h3>
+                <p className="text-xl mb-4">Contra Incendios</p>
               </div>
+            </div>
 
-              <div>
-                <div className="text-4xl mb-4">📍</div>
-                <h3 className="text-xl font-bold mb-2">Ubicación</h3>
-                <p>Buenos Aires, Argentina</p>
+            {/* Servicio 3 - Mantenimiento */}
+            <div className="relative h-80 rounded-lg overflow-hidden group cursor-pointer">
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent z-10" />
+              <div className="absolute bottom-0 left-0 right-0 p-8 z-20 text-white">
+                <h3 className="text-3xl font-bold mb-2">Servicio de</h3>
+                <p className="text-xl mb-4">Mantenimiento</p>
               </div>
             </div>
           </div>
@@ -197,9 +413,48 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-8">
-        <div className="container mx-auto px-4 text-center">
-          <p>&copy; 2025 Total Protección. Todos los derechos reservados.</p>
+      <footer className="bg-[#1a1a1a] text-white py-12">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-4 gap-8 mb-8">
+            <div>
+              <Image
+                src="/logos/Logo-Melisam.png"
+                alt="Melisam Fire Group"
+                width={180}
+                height={36}
+                className="h-10 w-auto mb-4"
+              />
+              <p className="text-gray-400 text-sm">
+                Soluciones integrales en protección contra incendios
+              </p>
+            </div>
+            <div>
+              <h4 className="font-bold mb-4">Empresa</h4>
+              <ul className="space-y-2 text-gray-400 text-sm">
+                <li><a href="#" className="hover:text-white transition">Nosotros</a></li>
+                <li><a href="#" className="hover:text-white transition">Certificaciones</a></li>
+                <li><a href="#" className="hover:text-white transition">Clientes</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-bold mb-4">Servicios</h4>
+              <ul className="space-y-2 text-gray-400 text-sm">
+                <li><a href="#" className="hover:text-white transition">Ingeniería</a></li>
+                <li><a href="#" className="hover:text-white transition">Extintores</a></li>
+                <li><a href="#" className="hover:text-white transition">Mantenimiento</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-bold mb-4">Contacto</h4>
+              <ul className="space-y-2 text-gray-400 text-sm">
+                <li>info@totalproteccion.com.ar</li>
+                <li>Buenos Aires, Argentina</li>
+              </ul>
+            </div>
+          </div>
+          <div className="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
+            <p>&copy; 2025 Total Protección. Todos los derechos reservados.</p>
+          </div>
         </div>
       </footer>
     </main>
