@@ -121,45 +121,13 @@ export default function Home() {
               index === currentSlide ? 'opacity-100' : 'opacity-0'
             }`}
           >
-            <div className="relative h-full bg-gradient-to-r from-gray-800 to-gray-600">
+            <div className="relative h-full">
               <Image
                 src={slide.image}
                 alt={slide.title}
                 fill
-                className="object-cover opacity-50"
+                className="object-cover"
               />
-              <div className="absolute inset-0 bg-black/40" />
-
-              {/* Content */}
-              <div className="relative container mx-auto px-4 h-full flex items-center">
-                <div className="max-w-2xl text-white">
-                  <div className="flex items-center gap-4 mb-6">
-                    <Image
-                      src="/logos/Logo-Melisam.png"
-                      alt="Melisam"
-                      width={180}
-                      height={36}
-                      className="h-10 w-auto"
-                    />
-                    <Image
-                      src="/logos/logo-amerex.png"
-                      alt="Amerex"
-                      width={140}
-                      height={44}
-                      className="h-12 w-auto"
-                    />
-                  </div>
-                  <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
-                    {slide.title}
-                  </h1>
-                  <p className="text-xl md:text-2xl mb-8 text-gray-200">
-                    {slide.subtitle}
-                  </p>
-                  <button className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded text-lg font-semibold transition">
-                    HACEMOS TU CONSULTA
-                  </button>
-                </div>
-              </div>
             </div>
           </div>
         ))}
