@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     description: 'Empresa líder en sistemas de protección contra incendios en Argentina.',
     images: [
       {
-        url: '/logos/Logo-Melisam.png',
+        url: '/logos/Logo-TotalProteccion.png',
         width: 701,
         height: 143,
         alt: 'Total Protección Logo',
@@ -29,9 +29,13 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Total Protección | Protección Contra Incendio',
     description: 'Sistemas de protección contra incendios en Argentina',
-    images: ['/logos/Logo-Melisam.png'],
+    images: ['/logos/Logo-TotalProteccion.png'],
   },
-  viewport: 'width=device-width, initial-scale=1',
+}
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
   themeColor: '#1a365d',
 }
 

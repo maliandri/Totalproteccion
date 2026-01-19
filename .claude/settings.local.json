@@ -12,7 +12,13 @@
       "Bash(git push:*)",
       "Bash(git commit:*)",
       "Bash(npm install:*)",
-      "Bash(npm run build:*)"
+      "Bash(npm run build:*)",
+      "Bash(npm run dev:*)",
+      "Bash(pkill:*)",
+      "Bash(taskkill:*)",
+      "Bash(if exist \"c:\\\\Users\\\\maria\\\\Desktop\\\\totalproteccion\\\\downloaded-content\" rmdir /s /q \"c:\\\\Users\\\\maria\\\\Desktop\\\\totalproteccion\\\\downloaded-content\")",
+      "Bash(timeout:*)",
+      "Bash(powershell:*)"
     ]
   }
 }
