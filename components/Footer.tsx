@@ -41,8 +41,8 @@ export default function Footer() {
             <h4 className="font-bold mb-4">Contacto</h4>
             <ul className="space-y-2 text-gray-400 text-sm">
               <li>info@totalproteccion.com.ar</li>
-              <li>Buenos Aires, Argentina</li>
-              <li>+54 11 XXXX-XXXX</li>
+              <li>Bahía Blanca 608, Neuquén</li>
+              <li>+54 9 299 548-4575</li>
             </ul>
             <div className="flex gap-3 mt-4">
               <a href="#" className="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center hover:bg-red-600 transition">
@@ -64,7 +64,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
-          <p>&copy; 2025 Total Proteccion. Todos los derechos reservados.</p>
+          <p>&copy; {new Date().getFullYear()} Total Proteccion. Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>

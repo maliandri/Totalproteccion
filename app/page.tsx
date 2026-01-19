@@ -2,12 +2,14 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0)
+  const [currentCertSlide, setCurrentCertSlide] = useState(0)
+  const [currentClientSlide, setCurrentClientSlide] = useState(0)
 
   const slides = [
     {
@@ -46,6 +48,53 @@ export default function Home() {
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)
   }
+
+  // Certificaciones data
+  const certifications = [
+    { src: '/certifications/9001-150x150.jpg', alt: 'ISO 9001' },
+    { src: '/certifications/14001-150x150.jpg', alt: 'ISO 14001' },
+    { src: '/certifications/logo-certificaciones-01-150x150.jpg', alt: 'IRAM' },
+    { src: '/certifications/logo-certificaciones-02-150x150.jpg', alt: 'IRAM' },
+    { src: '/certifications/logo-certificaciones-05-150x150.jpg', alt: 'NFPA' },
+    { src: '/certifications/logo-certificaciones-06-150x150.jpg', alt: 'Bureau Veritas' },
+    { src: '/certifications/Logo-CAS-150x150.jpg', alt: 'CAS' },
+    { src: '/certifications/logo-certificaciones-13-150x150.jpg', alt: 'ODS' },
+  ]
+
+  // Clientes data
+  const clients = [
+    { src: '/clients/imgi_127_logo-ypf-min-1-1.png', alt: 'YPF' },
+    { src: '/clients/imgi_30_logo-coca-cola-min.png', alt: 'Coca Cola' },
+    { src: '/clients/logo-ford-scale-300x226.png', alt: 'Ford' },
+    { src: '/clients/imgi_75_logo-mercado-libre-min.png', alt: 'Mercado Libre' },
+    { src: '/clients/imgi_99_logo-quilmes-min.png', alt: 'Quilmes' },
+    { src: '/clients/imgi_32_logo-correo-arg-min-1.png', alt: 'Correo Argentino' },
+    { src: '/clients/metrovias-min.png', alt: 'Metrovías' },
+  ]
+
+  // Auto-slide para Hero cada 5 segundos
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length)
+    }, 5000)
+    return () => clearInterval(timer)
+  }, [slides.length])
+
+  // Auto-slide para Certificaciones cada 5 segundos
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentCertSlide((prev) => (prev + 1) % certifications.length)
+    }, 5000)
+    return () => clearInterval(timer)
+  }, [certifications.length])
+
+  // Auto-slide para Clientes cada 5 segundos
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentClientSlide((prev) => (prev + 1) % clients.length)
+    }, 5000)
+    return () => clearInterval(timer)
+  }, [clients.length])
 
   return (
     <main className="min-h-screen bg-white">
@@ -123,7 +172,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Certificaciones Section - py-20 (80px) like melisam */}
+      {/* Certificaciones Section - Carrusel animado */}
       <section id="certificaciones" className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-4">
@@ -136,79 +185,39 @@ export default function Home() {
             Nuestros procesos y servicios están respaldados por las certificaciones más rigurosas de la industria
           </p>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-8 items-center">
-            <div className="flex justify-center">
-              <Image
-                src="/certifications/9001-150x150.jpg"
-                alt="ISO 9001"
-                width={150}
-                height={150}
-                className="grayscale hover:grayscale-0 transition-all duration-300 hover:scale-110"
-              />
+          {/* Carrusel de certificaciones */}
+          <div className="relative overflow-hidden">
+            <div
+              className="flex transition-transform duration-700 ease-in-out"
+              style={{ transform: `translateX(-${currentCertSlide * (100 / 4)}%)` }}
+            >
+              {[...certifications, ...certifications].map((cert, index) => (
+                <div key={index} className="flex-shrink-0 w-1/2 md:w-1/4 px-4">
+                  <div className="flex justify-center">
+                    <Image
+                      src={cert.src}
+                      alt={cert.alt}
+                      width={150}
+                      height={150}
+                      className="grayscale hover:grayscale-0 transition-all duration-300 hover:scale-110"
+                    />
+                  </div>
+                </div>
+              ))}
             </div>
-            <div className="flex justify-center">
-              <Image
-                src="/certifications/14001-150x150.jpg"
-                alt="ISO 14001"
-                width={150}
-                height={150}
-                className="grayscale hover:grayscale-0 transition-all duration-300 hover:scale-110"
+          </div>
+
+          {/* Indicadores */}
+          <div className="flex justify-center mt-8 gap-2">
+            {certifications.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentCertSlide(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  index === currentCertSlide ? 'bg-red-600 w-6' : 'bg-gray-300'
+                }`}
               />
-            </div>
-            <div className="flex justify-center">
-              <Image
-                src="/certifications/logo-certificaciones-01-150x150.jpg"
-                alt="IRAM"
-                width={150}
-                height={150}
-                className="grayscale hover:grayscale-0 transition-all duration-300 hover:scale-110"
-              />
-            </div>
-            <div className="flex justify-center">
-              <Image
-                src="/certifications/logo-certificaciones-02-150x150.jpg"
-                alt="IRAM"
-                width={150}
-                height={150}
-                className="grayscale hover:grayscale-0 transition-all duration-300 hover:scale-110"
-              />
-            </div>
-            <div className="flex justify-center">
-              <Image
-                src="/certifications/logo-certificaciones-05-150x150.jpg"
-                alt="NFPA"
-                width={150}
-                height={150}
-                className="grayscale hover:grayscale-0 transition-all duration-300 hover:scale-110"
-              />
-            </div>
-            <div className="flex justify-center">
-              <Image
-                src="/certifications/logo-certificaciones-06-150x150.jpg"
-                alt="Bureau Veritas"
-                width={150}
-                height={150}
-                className="grayscale hover:grayscale-0 transition-all duration-300 hover:scale-110"
-              />
-            </div>
-            <div className="flex justify-center">
-              <Image
-                src="/certifications/Logo-CAS-150x150.jpg"
-                alt="CAS"
-                width={150}
-                height={150}
-                className="grayscale hover:grayscale-0 transition-all duration-300 hover:scale-110"
-              />
-            </div>
-            <div className="flex justify-center">
-              <Image
-                src="/certifications/logo-certificaciones-13-150x150.jpg"
-                alt="ODS"
-                width={150}
-                height={150}
-                className="grayscale hover:grayscale-0 transition-all duration-300 hover:scale-110"
-              />
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -445,7 +454,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Clientes Section - 7 cols, h-16 logos */}
+      {/* Clientes Section - Carrusel animado */}
       <section id="clientes" className="py-20 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-4">
@@ -456,70 +465,39 @@ export default function Home() {
             Empresas líderes confían en nosotros para proteger sus instalaciones
           </p>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-12 items-center">
-            <div className="flex justify-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
-              <Image
-                src="/clients/imgi_127_logo-ypf-min-1-1.png"
-                alt="YPF"
-                width={140}
-                height={70}
-                className="grayscale hover:grayscale-0 transition-all duration-300 object-contain w-full h-16"
-              />
+          {/* Carrusel de clientes */}
+          <div className="relative overflow-hidden">
+            <div
+              className="flex transition-transform duration-700 ease-in-out"
+              style={{ transform: `translateX(-${currentClientSlide * (100 / 4)}%)` }}
+            >
+              {[...clients, ...clients].map((client, index) => (
+                <div key={index} className="flex-shrink-0 w-1/2 md:w-1/4 px-4">
+                  <div className="flex justify-center p-4 bg-white rounded-lg shadow-sm">
+                    <Image
+                      src={client.src}
+                      alt={client.alt}
+                      width={140}
+                      height={70}
+                      className="grayscale hover:grayscale-0 transition-all duration-300 object-contain w-full h-16"
+                    />
+                  </div>
+                </div>
+              ))}
             </div>
-            <div className="flex justify-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
-              <Image
-                src="/clients/imgi_30_logo-coca-cola-min.png"
-                alt="Coca Cola"
-                width={140}
-                height={70}
-                className="grayscale hover:grayscale-0 transition-all duration-300 object-contain w-full h-16"
+          </div>
+
+          {/* Indicadores */}
+          <div className="flex justify-center mt-8 gap-2">
+            {clients.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentClientSlide(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  index === currentClientSlide ? 'bg-red-600 w-6' : 'bg-gray-300'
+                }`}
               />
-            </div>
-            <div className="flex justify-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
-              <Image
-                src="/clients/logo-ford-scale-300x226.png"
-                alt="Ford"
-                width={140}
-                height={70}
-                className="grayscale hover:grayscale-0 transition-all duration-300 object-contain w-full h-16"
-              />
-            </div>
-            <div className="flex justify-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
-              <Image
-                src="/clients/imgi_75_logo-mercado-libre-min.png"
-                alt="Mercado Libre"
-                width={140}
-                height={70}
-                className="grayscale hover:grayscale-0 transition-all duration-300 object-contain w-full h-16"
-              />
-            </div>
-            <div className="flex justify-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
-              <Image
-                src="/clients/imgi_99_logo-quilmes-min.png"
-                alt="Quilmes"
-                width={140}
-                height={70}
-                className="grayscale hover:grayscale-0 transition-all duration-300 object-contain w-full h-16"
-              />
-            </div>
-            <div className="flex justify-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
-              <Image
-                src="/clients/imgi_32_logo-correo-arg-min-1.png"
-                alt="Correo Argentino"
-                width={140}
-                height={70}
-                className="grayscale hover:grayscale-0 transition-all duration-300 object-contain w-full h-16"
-              />
-            </div>
-            <div className="flex justify-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
-              <Image
-                src="/clients/metrovias-min.png"
-                alt="Metrovías"
-                width={140}
-                height={70}
-                className="grayscale hover:grayscale-0 transition-all duration-300 object-contain w-full h-16"
-              />
-            </div>
+            ))}
           </div>
         </div>
       </section>
