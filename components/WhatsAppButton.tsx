@@ -45,6 +45,7 @@ export default function WhatsAppButton({ phoneNumber = '5492995484575', productN
       'capacitaciones': 'Capacitaciones',
       'clientes': 'la sección de Clientes',
       'contacto': 'la página de Contacto',
+      'empresa': 'la página de Empresa',
     }
 
     // Construir mensaje según la ruta

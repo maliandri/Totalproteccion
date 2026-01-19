@@ -82,6 +82,13 @@ export default function Header({ activePage }: HeaderProps) {
               Inicio
             </Link>
 
+            <Link
+              href="/empresa"
+              className={`hover:text-red-500 transition text-sm font-medium ${activePage === 'empresa' ? 'text-red-500' : ''}`}
+            >
+              Empresa
+            </Link>
+
             {/* Productos Dropdown */}
             <div
               className="relative group"
@@ -216,6 +223,7 @@ export default function Header({ activePage }: HeaderProps) {
         <div className="lg:hidden bg-[#252525] border-t border-gray-700 max-h-[80vh] overflow-y-auto">
           <nav className="container mx-auto px-4 py-4 flex flex-col space-y-1">
             <Link href="/" className="hover:text-red-500 transition py-2">Inicio</Link>
+            <Link href="/empresa" className="hover:text-red-500 transition py-2">Empresa</Link>
 
             <div className="border-t border-gray-700 pt-2">
               <p className="text-red-500 font-bold py-2">Productos</p>
