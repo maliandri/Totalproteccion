@@ -27,8 +27,8 @@ export default function Home() {
     },
     {
       image: '/hero/slider-mobile-ext.webp',
-      title: 'Fabricamos Extintores',
-      subtitle: 'de todo Tipo y Capacidad.',
+      title: 'Distribuidor Oficial Melisam',
+      subtitle: 'Extintores de todo Tipo y Capacidad.',
     },
     {
       image: '/hero/slider-mobile-mant.webp',

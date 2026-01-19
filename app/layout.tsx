@@ -1,9 +1,10 @@
 import type { Metadata, Viewport } from 'next'
 import './globals.css'
+import WhatsAppButton from '@/components/WhatsAppButton'
 
 export const metadata: Metadata = {
   title: 'Total Protección | Soluciones Integrales en Protección Contra Incendio',
-  description: 'Empresa líder en Argentina especializada en sistemas de protección contra incendios. Venta, instalación y mantenimiento de extintores, detectores de humo, y sistemas automáticos.',
+  description: 'Distribuidor oficial de Melisam en Argentina. Venta, instalación y mantenimiento de extintores, detectores de humo, y sistemas automáticos de protección contra incendios.',
   keywords: 'protección contra incendios, extintores, detectores de humo, sistemas contra incendio, matafuegos, rociadores automáticos, Argentina',
   authors: [{ name: 'Total Protección' }],
   creator: 'Total Protección',
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
     url: 'https://totalproteccion.com.ar',
     siteName: 'Total Protección',
     title: 'Total Protección | Soluciones en Protección Contra Incendio',
-    description: 'Empresa líder en sistemas de protección contra incendios en Argentina.',
+    description: 'Distribuidor oficial de Melisam. Sistemas de protección contra incendios en Argentina.',
     images: [
       {
         url: '/logos/Logo-TotalProteccion.png',
@@ -46,7 +47,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <body>{children}</body>
+      <body>
+        {children}
+        <WhatsAppButton />
+      </body>
     </html>
   )
 }
