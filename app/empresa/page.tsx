@@ -69,21 +69,24 @@ export default function EmpresaPage() {
                 <Image
                   src="/logos/Logo-TotalProteccion.png"
                   alt="Total Protección Logo"
-                  width={400}
-                  height={200}
-                  className="mx-auto mb-6"
+                  width={350}
+                  height={100}
+                  className="mx-auto mb-8 h-auto"
                 />
-                <div className="text-center">
-                  <p className="text-blue-800 font-semibold text-lg mb-2">
+                <div className="bg-white rounded-lg p-6 shadow-md">
+                  <p className="text-blue-800 font-semibold text-lg mb-4 text-center">
                     Distribuidor Oficial
                   </p>
                   <Image
                     src="/logos/melisam-logo.png"
-                    alt="Melisam Logo"
-                    width={200}
-                    height={80}
-                    className="mx-auto"
+                    alt="Melisam Fire Group - Logo Oficial"
+                    width={280}
+                    height={100}
+                    className="mx-auto h-auto max-h-24 object-contain"
                   />
+                  <p className="text-center text-gray-500 text-sm mt-4">
+                    Provincia de Neuquén
+                  </p>
                 </div>
               </div>
             </div>
