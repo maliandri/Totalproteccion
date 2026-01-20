@@ -77,13 +77,13 @@ export default function EmpresaPage() {
                   <p className="text-blue-800 font-semibold text-lg mb-4 text-center">
                     Distribuidor Oficial
                   </p>
-                  <Image
-                    src="/logos/melisam-logo.png"
-                    alt="Melisam Fire Group - Logo Oficial"
-                    width={280}
-                    height={100}
-                    className="mx-auto h-auto max-h-24 object-contain"
-                  />
+                  <div className="bg-gray-900 rounded-lg p-4">
+                    <img
+                      src="/logos/melisam-logo.jpg"
+                      alt="Melisam Fire Group - Logo Oficial"
+                      className="mx-auto h-auto max-h-20 object-contain"
+                    />
+                  </div>
                   <p className="text-center text-gray-500 text-sm mt-4">
                     Provincia de Neuquén
                   </p>
