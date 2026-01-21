@@ -142,10 +142,10 @@ export default function Header({ activePage }: HeaderProps) {
               </Link>
               {openDropdown === 'sistemas' && (
                 <div className="absolute top-full left-0 bg-white text-gray-800 rounded-lg shadow-xl py-3 min-w-[280px]">
-                  {/* Ingenieria - destacado arriba */}
+                  {/* Ingenieria */}
                   <Link
                     href={sistemasSubmenu.topLink.href}
-                    className="block px-4 py-2 bg-green-600 text-white hover:bg-green-700 text-sm font-medium mx-2 rounded mb-2"
+                    className="block px-4 py-2 hover:bg-gray-100 hover:text-red-600 text-sm font-medium border-b border-gray-100"
                   >
                     {sistemasSubmenu.topLink.name}
                   </Link>
@@ -271,7 +271,7 @@ export default function Header({ activePage }: HeaderProps) {
 
             <div className="border-t border-gray-700 pt-2">
               <p className="text-red-500 font-bold py-2">Sistemas contra Incendios</p>
-              <Link href={sistemasSubmenu.topLink.href} className="block pl-4 py-1 text-green-400 hover:text-green-300 text-sm font-medium">
+              <Link href={sistemasSubmenu.topLink.href} className="block pl-4 py-1 text-gray-400 hover:text-white text-sm font-medium">
                 {sistemasSubmenu.topLink.name}
               </Link>
               {sistemasSubmenu.mainLinks.map((item, index) => (
