@@ -90,10 +90,13 @@ export default function AguaAFFFPage() {
                 key={index}
                 className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow border border-gray-100"
               >
-                <div className="relative h-48 bg-gray-100 flex items-center justify-center">
-                  <div className="w-20 h-36 bg-gradient-to-b from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
-                    <span className="text-white font-bold text-xs text-center px-1">AGUA AFFF</span>
-                  </div>
+                <div className="relative h-48 bg-gray-100">
+                  <Image
+                    src="/products/product/Agua-y-afff-300x240.jpg"
+                    alt={producto.name}
+                    fill
+                    className="object-contain p-4"
+                  />
                 </div>
                 <div className="p-4">
                   <h3 className="font-bold text-sm mb-3 text-gray-800 min-h-[40px]">{producto.name}</h3>

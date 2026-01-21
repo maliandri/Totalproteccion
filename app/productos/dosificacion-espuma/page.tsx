@@ -1,26 +1,113 @@
+'use client'
+
 import Image from 'next/image'
 import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
-const productos = [
+const categorias = [
   {
-    name: 'Dosificadores Inline',
-    description: 'Sistemas de dosificacion en linea para mezcla automatica de espuma concentrada. Proporcionan una mezcla precisa y constante del agente espumante.',
-    features: ['Dosificacion precisa del 1% al 6%', 'Sin necesidad de energia externa', 'Bajo mantenimiento', 'Compatibles con espumas AFFF y AR-AFFF', 'Instalacion sencilla'],
-    image: '/products/cat-producto-Espumas-1-1.jpg',
+    name: 'Dosificadores',
+    description: 'Equipos para mezcla automática de espuma concentrada con agua',
+    color: 'bg-blue-700',
+    productos: [
+      {
+        name: 'Dosificador Inline 1½"',
+        specs: ['Caudal: 100-400 L/min', 'Dosificación: 1%-6%', 'Conexión: Storz', 'Sin energía externa'],
+      },
+      {
+        name: 'Dosificador Inline 2½"',
+        specs: ['Caudal: 400-1200 L/min', 'Dosificación: 1%-6%', 'Conexión: Storz', 'Sin energía externa'],
+      },
+      {
+        name: 'Dosificador Venturi',
+        specs: ['Efecto venturi', 'Alta precisión', 'Bajo mantenimiento', 'AFFF/AR-AFFF'],
+      },
+      {
+        name: 'Dosificador de Presión Balanceada',
+        specs: ['Grandes caudales', 'Precisión constante', 'Uso industrial', 'Certificado UL/FM'],
+      },
+    ],
   },
   {
     name: 'Proporcionadores',
-    description: 'Equipos de proporcionado de espuma por venturi o presion balanceada. Ideales para sistemas fijos de proteccion contra incendios.',
-    features: ['Rango de caudales amplio', 'Alta fiabilidad', 'Materiales resistentes a la corrosion', 'Certificados segun normas internacionales', 'Facil calibracion'],
-    image: '/products/bronceria-1.jpg',
+    description: 'Sistemas de proporcionado para instalaciones fijas',
+    color: 'bg-indigo-700',
+    productos: [
+      {
+        name: 'Proporcionador Bladder Tank',
+        specs: ['Con membrana interna', 'Capacidad: 200-5000L', 'Presión: 12 bar', 'Larga vida útil'],
+      },
+      {
+        name: 'Proporcionador de Línea',
+        specs: ['Instalación en línea', 'Múltiples caudales', 'Acero inoxidable', 'Fácil mantenimiento'],
+      },
+      {
+        name: 'Proporcionador Portátil',
+        specs: ['Uso móvil', 'Conexión rápida', 'Liviano', 'Ideal para bomberos'],
+      },
+    ],
   },
   {
     name: 'Tanques de Espuma',
-    description: 'Depositos de almacenamiento para concentrados de espuma. Fabricados en acero inoxidable o poliester reforzado con fibra de vidrio.',
-    features: ['Capacidades desde 200L hasta 20.000L', 'Indicador de nivel', 'Conexiones de llenado y descarga', 'Resistentes a la intemperie', 'Opciones de calefaccion'],
-    image: '/products/maquinaria-recarga-1.jpg',
+    description: 'Depósitos para almacenamiento de concentrado de espuma',
+    color: 'bg-cyan-700',
+    productos: [
+      {
+        name: 'Tanque Atmosférico 200L',
+        specs: ['Capacidad: 200 litros', 'PRFV o Acero', 'Indicador de nivel', 'Tapa de inspección'],
+      },
+      {
+        name: 'Tanque Atmosférico 500L',
+        specs: ['Capacidad: 500 litros', 'PRFV o Acero', 'Indicador de nivel', 'Conexiones 2"'],
+      },
+      {
+        name: 'Tanque Atmosférico 1000L',
+        specs: ['Capacidad: 1000 litros', 'PRFV o Acero', 'Indicador de nivel', 'Base de apoyo'],
+      },
+      {
+        name: 'Tanque Presurizado',
+        specs: ['Bladder tank', 'Presión: 12 bar', 'Capacidad: 200-5000L', 'Certificado'],
+      },
+    ],
+  },
+  {
+    name: 'Cámaras de Espuma',
+    description: 'Dispositivos de descarga para tanques de almacenamiento',
+    color: 'bg-purple-700',
+    productos: [
+      {
+        name: 'Cámara de Espuma Tipo I',
+        specs: ['Para tanques cónicos', 'Descarga suave', 'Acero inoxidable', 'Múltiples diámetros'],
+      },
+      {
+        name: 'Cámara de Espuma Tipo II',
+        specs: ['Para tanques flotantes', 'Deflector interno', 'Alta expansión', 'NFPA 11'],
+      },
+      {
+        name: 'Generador de Espuma',
+        specs: ['Alta/Media expansión', 'Portátil o fijo', 'Acero galvanizado', 'Uso industrial'],
+      },
+    ],
+  },
+  {
+    name: 'Monitores y Lanzas',
+    description: 'Equipos de descarga de espuma para operaciones manuales',
+    color: 'bg-red-700',
+    productos: [
+      {
+        name: 'Monitor de Espuma Fijo',
+        specs: ['Caudal: 1000-4000 L/min', 'Alcance: 40-60m', 'Giro: 360°', 'Bronce/Acero inox'],
+      },
+      {
+        name: 'Monitor de Espuma Portátil',
+        specs: ['Caudal: 500-1500 L/min', 'Con trípode', 'Ajustable', 'Uso bomberos'],
+      },
+      {
+        name: 'Lanza de Espuma',
+        specs: ['Caudal: 200-800 L/min', 'Chorro/Niebla', 'Bronce', 'Ergonómica'],
+      },
+    ],
   },
 ]
 
