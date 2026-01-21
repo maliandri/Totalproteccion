@@ -70,10 +70,12 @@ export default function EmpresaPage() {
                     Distribuidor Oficial Mayorista
                   </p>
                   <div className="bg-gray-900 rounded-lg p-4">
-                    <img
-                      src="/logos/melisam-logo.jpg"
+                    <Image
+                      src="/logos/melisam-logo.png"
                       alt="Melisam Fire Group - Logo Oficial"
-                      className="mx-auto h-auto max-h-20 object-contain"
+                      width={280}
+                      height={57}
+                      className="mx-auto h-auto"
                     />
                   </div>
                   <p className="text-center text-gray-500 text-sm mt-4">
@@ -150,7 +152,7 @@ export default function EmpresaPage() {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-gray-800 mb-2">Atención Comercial</h3>
-                  <p className="text-gray-700 text-lg font-medium">Bahía Blanca 6XX</p>
+                  <p className="text-gray-700 text-lg font-medium">Bahía Blanca 608</p>
                   <p className="text-gray-600">Neuquén Capital</p>
                 </div>
               </div>
