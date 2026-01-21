@@ -169,7 +169,7 @@ export default function TiposMatafuegosPage() {
             />
             <div className="absolute bottom-4 right-4 bg-black/70 text-white px-4 py-2 rounded-lg text-sm">
               <p className="font-semibold">Fuente: Melisam Extintores</p>
-              <p className="text-xs text-gray-300">Total Protección - Distribuidor Oficial</p>
+              <p className="text-xs text-gray-300">Total Protección - Distribuidor Oficial Mayorista</p>
             </div>
           </div>
           <div className="mt-6 text-center">
@@ -409,7 +409,7 @@ export default function TiposMatafuegosPage() {
           <p className="text-gray-500 text-sm">
             Información técnica basada en normativas IRAM y especificaciones de <strong>Melisam Extintores</strong>.
             <br />
-            <strong>Total Protección</strong> - Distribuidor Oficial para la Provincia de Neuquén.
+            <strong>Total Protección</strong> - Distribuidor Oficial Mayorista para la Provincia de Neuquén.
           </p>
         </div>
       </section>

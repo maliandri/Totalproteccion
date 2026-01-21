@@ -310,7 +310,7 @@ export default function AcademiaPage() {
       <section className="py-8 bg-gray-100">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <p className="text-gray-500 text-sm">
-            <strong>Total Protección</strong> - Distribuidor Oficial Melisam para la Provincia de Neuquén.
+            <strong>Total Protección</strong> - Distribuidor Oficial Mayorista Melisam para la Provincia de Neuquén.
             <br />
             Bahía Blanca 608, Neuquén Capital | Tel: +54 9 299 548-4575
           </p>

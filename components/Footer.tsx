@@ -34,15 +34,18 @@ export default function Footer() {
               <li><Link href="/sistemas" className="hover:text-white transition">Sistemas contra Incendios</Link></li>
               <li><Link href="/certificaciones" className="hover:text-white transition">Certificaciones</Link></li>
               <li><Link href="/capacitaciones" className="hover:text-white transition">Capacitaciones</Link></li>
-              <li><Link href="/clientes" className="hover:text-white transition">Clientes</Link></li>
+              <li><Link href="/rrhh" className="hover:text-white transition">Trabaja con Nosotros</Link></li>
             </ul>
           </div>
           <div>
             <h4 className="font-bold mb-4">Contacto</h4>
             <ul className="space-y-2 text-gray-400 text-sm">
               <li>info@totalproteccion.com.ar</li>
-              <li>Bahía Blanca 608, Neuquén</li>
-              <li>+54 9 299 548-4575</li>
+              <li className="font-medium text-gray-300">Atención Comercial</li>
+              <li>Bahía Blanca 6XX, Neuquén Capital</li>
+              <li className="font-medium text-gray-300 mt-2">Ingeniería de Obras</li>
+              <li>La Pampa Esq. Fava, Neuquén Capital</li>
+              <li className="mt-2">+54 9 299 548-4575</li>
             </ul>
             <div className="flex gap-3 mt-4">
               <a href="#" className="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center hover:bg-red-600 transition">

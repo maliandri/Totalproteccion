@@ -6,14 +6,6 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
 export default function EmpresaPage() {
-  const ubicacion = {
-    direccion: 'Bahía Blanca 608, esq. Pampa y José Fava',
-    ciudad: 'Neuquén Capital',
-    provincia: 'Neuquén',
-    codigoPostal: 'Q8300',
-    googleMapsUrl: 'https://www.google.com/maps/search/?api=1&query=Bahia+Blanca+608+Neuquen+Argentina'
-  }
-
   return (
     <main className="min-h-screen bg-white">
       <Header activePage="empresa" />
@@ -25,7 +17,7 @@ export default function EmpresaPage() {
             Nuestra Empresa
           </h1>
           <p className="text-xl text-blue-100 text-center max-w-2xl mx-auto">
-            Distribuidor Oficial de Melisam para la Provincia de Neuquén
+            Distribuidor Oficial Mayorista de Melisam para la Provincia de Neuquén
           </p>
         </div>
       </section>
@@ -39,7 +31,7 @@ export default function EmpresaPage() {
                 Quiénes Somos
               </h2>
               <p className="text-gray-600 mb-4 leading-relaxed">
-                <strong>Total Protección</strong> es el <strong>Distribuidor Oficial de Melisam</strong> para toda la <strong>Provincia de Neuquén</strong>. Nos especializamos en brindar soluciones integrales en protección contra incendios para empresas, industrias y particulares.
+                <strong>Total Protección</strong> es el <strong>Distribuidor Oficial Mayorista de Melisam</strong> para toda la <strong>Provincia de Neuquén</strong>. Nos especializamos en brindar soluciones integrales en protección contra incendios para empresas, industrias y particulares.
               </p>
               <p className="text-gray-600 mb-4 leading-relaxed">
                 Contamos con una amplia gama de productos de la más alta calidad: matafuegos, mangueras, gabinetes, sistemas de extinción, equipamiento para bomberos y mucho más. Todos nuestros productos cuentan con las certificaciones correspondientes y el respaldo de Melisam, empresa líder en el rubro.
@@ -75,7 +67,7 @@ export default function EmpresaPage() {
                 />
                 <div className="bg-white rounded-lg p-6 shadow-md">
                   <p className="text-blue-800 font-semibold text-lg mb-4 text-center">
-                    Distribuidor Oficial
+                    Distribuidor Oficial Mayorista
                   </p>
                   <div className="bg-gray-900 rounded-lg p-4">
                     <img
@@ -148,6 +140,7 @@ export default function EmpresaPage() {
           </h2>
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div className="bg-blue-50 p-8 rounded-lg">
+              {/* Atención Comercial */}
               <div className="flex items-start gap-4 mb-6">
                 <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center flex-shrink-0">
                   <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -156,15 +149,29 @@ export default function EmpresaPage() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-gray-800 mb-2">Nuestra Dirección</h3>
-                  <p className="text-gray-700 text-lg font-medium">{ubicacion.direccion}</p>
-                  <p className="text-gray-600">{ubicacion.ciudad}, {ubicacion.provincia}</p>
-                  <p className="text-gray-600">CP: {ubicacion.codigoPostal}</p>
+                  <h3 className="text-xl font-bold text-gray-800 mb-2">Atención Comercial</h3>
+                  <p className="text-gray-700 text-lg font-medium">Bahía Blanca 6XX</p>
+                  <p className="text-gray-600">Neuquén Capital</p>
                 </div>
               </div>
 
+              {/* Ingeniería de Obras */}
               <div className="flex items-start gap-4 mb-6">
                 <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-800 mb-2">Ingeniería de Obras</h3>
+                  <p className="text-gray-700 text-lg font-medium">La Pampa Esq. Fava</p>
+                  <p className="text-gray-600">Neuquén Capital</p>
+                </div>
+              </div>
+
+              {/* Horarios */}
+              <div className="flex items-start gap-4 mb-6">
+                <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center flex-shrink-0">
                   <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
@@ -177,7 +184,7 @@ export default function EmpresaPage() {
               </div>
 
               <a
-                href={ubicacion.googleMapsUrl}
+                href="https://www.google.com/maps/search/?api=1&query=Neuquen+Capital+Argentina"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded font-semibold transition-colors"
@@ -193,7 +200,7 @@ export default function EmpresaPage() {
             {/* Mapa embebido */}
             <div className="h-[400px] rounded-lg overflow-hidden shadow-lg">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3102.5!2d-68.06!3d-38.95!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sBah%C3%ADa%20Blanca%20608%2C%20Neuqu%C3%A9n!5e0!3m2!1ses!2sar!4v1"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50000!2d-68.06!3d-38.95!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x960a33a50a5b4d4d%3A0x8a7b5b4e5b5c5a5a!2sNeuqu%C3%A9n%2C%20Argentina!5e0!3m2!1ses!2sar!4v1"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -214,7 +221,7 @@ export default function EmpresaPage() {
             ¿Necesitás protección contra incendios?
           </h2>
           <p className="text-red-100 text-lg mb-8 max-w-2xl mx-auto">
-            Contactanos y te asesoramos sin compromiso. Somos tu distribuidor oficial Melisam en Neuquén.
+            Contactanos y te asesoramos sin compromiso. Somos tu Distribuidor Oficial Mayorista Melisam en Neuquén.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a

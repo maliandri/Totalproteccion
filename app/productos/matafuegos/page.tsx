@@ -97,7 +97,7 @@ export default function MatafuegosPage() {
             <span className="text-white">Matafuegos</span>
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Matafuegos</h1>
-          <p className="text-xl text-white/90">Distribuidor oficial Melisam - Extintores de todo tipo y capacidad</p>
+          <p className="text-xl text-white/90">Distribuidor Oficial Mayorista Melisam - Extintores de todo tipo y capacidad</p>
         </div>
       </section>
 
@@ -191,7 +191,7 @@ export default function MatafuegosPage() {
             />
             <div className="absolute bottom-4 right-4 bg-black/70 text-white px-4 py-2 rounded-lg text-sm">
               <p className="font-semibold">Fuente: Melisam Extintores</p>
-              <p className="text-xs text-gray-300">Total Protección - Distribuidor Oficial</p>
+              <p className="text-xs text-gray-300">Total Protección - Distribuidor Oficial Mayorista</p>
             </div>
           </div>
         </div>

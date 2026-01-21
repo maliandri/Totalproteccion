@@ -29,7 +29,7 @@ export default function Home() {
     },
     {
       image: '/hero/slider-mobile-ext.webp',
-      title: 'Distribuidor Oficial Melisam',
+      title: 'Distribuidor Oficial Mayorista Melisam',
       subtitle: 'Extintores de todo Tipo y Capacidad.',
     },
     {

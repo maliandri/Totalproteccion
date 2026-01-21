@@ -226,10 +226,10 @@ export default function Header({ activePage }: HeaderProps) {
             </div>
 
             <Link
-              href="/clientes"
-              className={`hover:text-red-500 transition text-sm font-medium ${activePage === 'clientes' ? 'text-red-500' : ''}`}
+              href="/rrhh"
+              className={`hover:text-red-500 transition text-sm font-medium ${activePage === 'rrhh' ? 'text-red-500' : ''}`}
             >
-              Clientes
+              RRHH
             </Link>
 
             <Link
@@ -303,8 +303,8 @@ export default function Header({ activePage }: HeaderProps) {
               ))}
             </div>
 
-            <Link href="/clientes" className="hover:text-red-500 transition py-2 border-t border-gray-700 pt-3">
-              Clientes
+            <Link href="/rrhh" className="hover:text-red-500 transition py-2 border-t border-gray-700 pt-3">
+              RRHH
             </Link>
             <Link href="/contacto" className="hover:text-red-500 transition py-2">
               Contacto
