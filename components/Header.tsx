@@ -14,6 +14,7 @@ const productosSubmenu = [
 ]
 
 const sistemasSubmenu = {
+  topLink: { name: 'Ingenieria, Diseno y Auditoria', href: '/ingenieria' },
   mainLinks: [
     { name: 'Montaje de Sistemas Contra Incendios', href: '/sistemas' },
   ],
@@ -94,13 +95,6 @@ export default function Header({ activePage }: HeaderProps) {
               Empresa
             </Link>
 
-            <Link
-              href="/ingenieria"
-              className={`hover:text-red-500 transition text-sm font-medium ${activePage === 'ingenieria' ? 'text-red-500' : ''}`}
-            >
-              Ingenieria
-            </Link>
-
             {/* Productos Dropdown */}
             <div
               className="relative group"
@@ -148,6 +142,13 @@ export default function Header({ activePage }: HeaderProps) {
               </Link>
               {openDropdown === 'sistemas' && (
                 <div className="absolute top-full left-0 bg-white text-gray-800 rounded-lg shadow-xl py-3 min-w-[280px]">
+                  {/* Ingenieria - destacado arriba */}
+                  <Link
+                    href={sistemasSubmenu.topLink.href}
+                    className="block px-4 py-2 bg-green-600 text-white hover:bg-green-700 text-sm font-medium mx-2 rounded mb-2"
+                  >
+                    {sistemasSubmenu.topLink.name}
+                  </Link>
                   {/* Links principales */}
                   {sistemasSubmenu.mainLinks.map((item, index) => (
                     <Link
@@ -258,7 +259,6 @@ export default function Header({ activePage }: HeaderProps) {
           <nav className="container mx-auto px-4 py-4 flex flex-col space-y-1">
             <Link href="/" className="hover:text-red-500 transition py-2">Inicio</Link>
             <Link href="/empresa" className="hover:text-red-500 transition py-2">Empresa</Link>
-            <Link href="/ingenieria" className="hover:text-red-500 transition py-2">Ingenieria</Link>
 
             <div className="border-t border-gray-700 pt-2">
               <p className="text-red-500 font-bold py-2">Productos</p>
@@ -271,6 +271,9 @@ export default function Header({ activePage }: HeaderProps) {
 
             <div className="border-t border-gray-700 pt-2">
               <p className="text-red-500 font-bold py-2">Sistemas contra Incendios</p>
+              <Link href={sistemasSubmenu.topLink.href} className="block pl-4 py-1 text-green-400 hover:text-green-300 text-sm font-medium">
+                {sistemasSubmenu.topLink.name}
+              </Link>
               {sistemasSubmenu.mainLinks.map((item, index) => (
                 <Link key={index} href={item.href} className="block pl-4 py-1 text-gray-400 hover:text-white text-sm font-medium">
                   {item.name}
