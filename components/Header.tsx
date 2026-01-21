@@ -13,34 +13,39 @@ const productosSubmenu = [
   { name: 'Espumas', href: '/productos/espumas' },
 ]
 
-const sistemasSubmenu = [
-  {
-    category: 'Extincion',
-    items: [
-      { name: 'Sistemas a Base de Agua', href: '/sistemas/extincion-agua' },
-      { name: 'Sistemas a Base de Espuma', href: '/sistemas/extincion-espuma' },
-      { name: 'Sistemas por Gases', href: '/sistemas/extincion-gases' },
-      { name: 'Sistemas en Cocinas', href: '/sistemas/extincion-cocinas' },
-      { name: 'Sistemas en Vehiculos Pesados', href: '/sistemas/extincion-vehiculos' },
-    ],
-  },
-  {
-    category: 'Deteccion',
-    items: [
-      { name: 'Sistemas Convencionales', href: '/sistemas/deteccion-convencional' },
-      { name: 'Sistemas Inteligentes', href: '/sistemas/deteccion-inteligente' },
-      { name: 'Sistemas de Aspiracion de Humo', href: '/sistemas/deteccion-aspiracion' },
-      { name: 'Barreras Infrarrojas', href: '/sistemas/deteccion-barreras' },
-    ],
-  },
-  {
-    category: 'Mantenimiento',
-    items: [
-      { name: 'Mantenimiento de Instalaciones Fijas', href: '/sistemas/mantenimiento-ifci' },
-      { name: 'Central de Carga para Gases Limpios', href: '/sistemas/mantenimiento-gases' },
-    ],
-  },
-]
+const sistemasSubmenu = {
+  mainLinks: [
+    { name: 'Montaje de Sistemas Contra Incendios', href: '/sistemas' },
+  ],
+  categories: [
+    {
+      category: 'Sistemas de Extincion de Incendios',
+      href: '/sistemas/extincion',
+      items: [
+        { name: 'Sistemas a Base de Agua', href: '/sistemas/extincion/agua' },
+        { name: 'Sistemas a Base de Espuma', href: '/sistemas/extincion/espuma' },
+        { name: 'Extincion por Gases', href: '/sistemas/extincion/gases' },
+        { name: 'Sistemas en Cocinas', href: '/sistemas/extincion/cocinas' },
+      ],
+    },
+    {
+      category: 'Sistemas de Deteccion de Incendios',
+      href: '/sistemas/deteccion',
+      items: [
+        { name: 'Sistemas Convencionales', href: '/sistemas/deteccion/convencional' },
+        { name: 'Sistemas Inteligentes', href: '/sistemas/deteccion/inteligente' },
+      ],
+    },
+    {
+      category: 'Mantenimiento Integral',
+      href: '/sistemas/mantenimiento',
+      items: [
+        { name: 'Mantenimiento de Instalaciones Fijas', href: '/sistemas/mantenimiento/instalaciones' },
+        { name: 'Central de Carga de Gases Limpios', href: '/sistemas/mantenimiento/gases' },
+      ],
+    },
+  ],
+}
 
 const capacitacionesSubmenu = [
   { name: 'Origen del Fuego', href: '/capacitaciones/origen-fuego' },
@@ -89,6 +94,13 @@ export default function Header({ activePage }: HeaderProps) {
               Empresa
             </Link>
 
+            <Link
+              href="/ingenieria"
+              className={`hover:text-red-500 transition text-sm font-medium ${activePage === 'ingenieria' ? 'text-red-500' : ''}`}
+            >
+              Ingenieria
+            </Link>
+
             {/* Productos Dropdown */}
             <div
               className="relative group"
@@ -135,19 +147,41 @@ export default function Header({ activePage }: HeaderProps) {
                 </svg>
               </Link>
               {openDropdown === 'sistemas' && (
-                <div className="absolute top-full left-0 bg-white text-gray-800 rounded-lg shadow-xl py-4 min-w-[600px] grid grid-cols-3 gap-4 px-4">
-                  {sistemasSubmenu.map((category, index) => (
-                    <div key={index}>
-                      <p className="font-bold text-red-600 mb-2 text-sm">{category.category}</p>
-                      {category.items.map((item, itemIndex) => (
-                        <Link
-                          key={itemIndex}
-                          href={item.href}
-                          className="block py-1 hover:text-red-600 text-sm"
-                        >
-                          {item.name}
-                        </Link>
-                      ))}
+                <div className="absolute top-full left-0 bg-white text-gray-800 rounded-lg shadow-xl py-3 min-w-[280px]">
+                  {/* Links principales */}
+                  {sistemasSubmenu.mainLinks.map((item, index) => (
+                    <Link
+                      key={index}
+                      href={item.href}
+                      className="block px-4 py-2 hover:bg-gray-100 hover:text-red-600 text-sm font-medium border-b border-gray-100"
+                    >
+                      {item.name}
+                    </Link>
+                  ))}
+                  {/* Categorias con submenus */}
+                  {sistemasSubmenu.categories.map((category, index) => (
+                    <div key={index} className="group/sub relative">
+                      <Link
+                        href={category.href}
+                        className="flex items-center justify-between px-4 py-2 hover:bg-gray-100 hover:text-red-600 text-sm"
+                      >
+                        {category.category}
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </Link>
+                      {/* Submenu */}
+                      <div className="absolute left-full top-0 bg-white text-gray-800 rounded-lg shadow-xl py-2 min-w-[220px] hidden group-hover/sub:block">
+                        {category.items.map((item, itemIndex) => (
+                          <Link
+                            key={itemIndex}
+                            href={item.href}
+                            className="block px-4 py-2 hover:bg-gray-100 hover:text-red-600 text-sm"
+                          >
+                            {item.name}
+                          </Link>
+                        ))}
+                      </div>
                     </div>
                   ))}
                 </div>
@@ -224,6 +258,7 @@ export default function Header({ activePage }: HeaderProps) {
           <nav className="container mx-auto px-4 py-4 flex flex-col space-y-1">
             <Link href="/" className="hover:text-red-500 transition py-2">Inicio</Link>
             <Link href="/empresa" className="hover:text-red-500 transition py-2">Empresa</Link>
+            <Link href="/ingenieria" className="hover:text-red-500 transition py-2">Ingenieria</Link>
 
             <div className="border-t border-gray-700 pt-2">
               <p className="text-red-500 font-bold py-2">Productos</p>
@@ -236,11 +271,18 @@ export default function Header({ activePage }: HeaderProps) {
 
             <div className="border-t border-gray-700 pt-2">
               <p className="text-red-500 font-bold py-2">Sistemas contra Incendios</p>
-              {sistemasSubmenu.map((category, catIndex) => (
-                <div key={catIndex} className="mb-2">
-                  <p className="pl-4 text-gray-500 text-xs uppercase">{category.category}</p>
+              {sistemasSubmenu.mainLinks.map((item, index) => (
+                <Link key={index} href={item.href} className="block pl-4 py-1 text-gray-400 hover:text-white text-sm font-medium">
+                  {item.name}
+                </Link>
+              ))}
+              {sistemasSubmenu.categories.map((category, catIndex) => (
+                <div key={catIndex} className="mb-2 mt-2">
+                  <Link href={category.href} className="pl-4 text-gray-300 text-sm hover:text-white block py-1">
+                    {category.category}
+                  </Link>
                   {category.items.map((item, itemIndex) => (
-                    <Link key={itemIndex} href={item.href} className="block pl-6 py-1 text-gray-400 hover:text-white text-sm">
+                    <Link key={itemIndex} href={item.href} className="block pl-6 py-1 text-gray-500 hover:text-white text-xs">
                       {item.name}
                     </Link>
                   ))}
