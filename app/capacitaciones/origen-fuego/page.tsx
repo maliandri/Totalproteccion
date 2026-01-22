@@ -10,15 +10,15 @@ const elementosFuego = [
     nombre: 'Calor',
     icono: '🔥',
     color: 'bg-orange-500',
-    descripcion: 'Energía que inicia la combustión',
+    descripcion: 'Energia que inicia la combustion',
     fuentes: [
-      'Chispas eléctricas',
-      'Fricción entre superficies',
+      'Chispas electricas',
+      'Friccion entre superficies',
       'Llamas abiertas',
-      'Reacciones químicas',
+      'Reacciones quimicas',
       'Superficies sobrecalentadas',
     ],
-    detalle: 'Cuando los materiales alcanzan su temperatura de ignición, comienza la combustión.',
+    detalle: 'Es la energia que inicia el proceso de combustion. Si un material alcanza su temperatura de ignicion, puede comenzar a arder.',
   },
   {
     nombre: 'Combustible',
@@ -26,66 +26,93 @@ const elementosFuego = [
     color: 'bg-amber-700',
     descripcion: 'Sustancia capaz de arder',
     fuentes: [
-      'Sólidos: madera, cartón, plásticos, telas',
-      'Líquidos: alcohol, nafta, aceites',
-      'Gases: butano, propano, hidrógeno',
+      'Solidos: madera, carton, plasticos, telas',
+      'Liquidos inflamables: alcohol, nafta, aceite',
+      'Gases: butano, propano, hidrogeno',
     ],
-    detalle: 'Todo material que puede oxidarse rápidamente liberando energía.',
+    detalle: 'Es la sustancia capaz de arder. Puede presentarse en diferentes estados. Sin combustible, no hay fuego posible.',
   },
   {
-    nombre: 'Oxígeno',
+    nombre: 'Oxigeno',
     icono: '💨',
     color: 'bg-blue-500',
-    descripcion: 'Agente oxidante (comburente)',
+    descripcion: 'Agente comburente',
     fuentes: [
-      'Aire atmosférico (~21% oxígeno)',
-      'Oxígeno almacenado',
-      'Sustancias oxidantes',
+      'Aire atmosferico (~21% oxigeno)',
+      'Oxigeno almacenado',
+      'Materiales con oxigeno en su composicion',
     ],
-    detalle: 'El aire contiene aproximadamente 21% de oxígeno, suficiente para mantener la combustión.',
+    detalle: 'Es el agente comburente que permite la reaccion quimica. El aire contiene aproximadamente un 21% de oxigeno, suficiente para mantener la combustion.',
   },
   {
-    nombre: 'Reacción en Cadena',
+    nombre: 'Reaccion en Cadena',
     icono: '⚡',
     color: 'bg-yellow-500',
     descripcion: 'Proceso autosostenido',
     fuentes: [
       'Radicales libres generados',
-      'Energía liberada retroalimenta',
-      'Ciclo continuo de combustión',
+      'Energia liberada retroalimenta',
+      'Ciclo continuo de combustion',
     ],
-    detalle: 'Proceso que mantiene la combustión una vez iniciada, generando más calor que reactiva el ciclo.',
+    detalle: 'Es el proceso que mantiene el fuego activo una vez iniciado. Los radicales libres generados durante la combustion reactivan el ciclo continuamente.',
   },
 ]
 
 const metodosExtincion = [
   {
     elemento: 'Calor',
-    metodo: 'Enfriamiento',
-    descripcion: 'Reducir la temperatura por debajo del punto de ignición',
-    ejemplos: 'Rociadores automáticos, agua nebulizada, mantas ignífugas',
-    color: 'border-orange-500',
+    efecto: 'Enfriamiento',
+    ejemplo: 'Rociadores automaticos, agua nebulizada',
+    color: 'bg-orange-100',
   },
   {
     elemento: 'Combustible',
-    metodo: 'Eliminación',
-    descripcion: 'Retirar o aislar el material combustible',
-    ejemplos: 'Corte de suministro de gas, remoción de materiales, cortafuegos',
-    color: 'border-amber-700',
+    efecto: 'Supresion del material',
+    ejemplo: 'Corte de gas, retirada de materiales combustibles',
+    color: 'bg-amber-100',
   },
   {
-    elemento: 'Oxígeno',
-    metodo: 'Sofocación',
-    descripcion: 'Impedir el contacto del fuego con el oxígeno',
-    ejemplos: 'Espumas, CO2, mantas ignífugas, arena',
-    color: 'border-blue-500',
+    elemento: 'Oxigeno',
+    efecto: 'Sofocacion',
+    ejemplo: 'Espumas, CO2, mantas ignifugas',
+    color: 'bg-blue-100',
   },
   {
-    elemento: 'Reacción',
-    metodo: 'Inhibición',
-    descripcion: 'Interrumpir la reacción química en cadena',
-    ejemplos: 'Polvo químico seco, agentes limpios (gases halogenados)',
-    color: 'border-yellow-500',
+    elemento: 'Reaccion quimica',
+    efecto: 'Interrupcion del proceso',
+    ejemplo: 'Polvo quimico seco, agente limpio',
+    color: 'bg-yellow-100',
+  },
+]
+
+const preguntasFrecuentes = [
+  {
+    pregunta: '¿Que es el tetraedro del fuego?',
+    respuesta: 'Es un modelo que explica los cuatro elementos necesarios para que se produzca el fuego: calor, combustible, oxigeno y reaccion quimica en cadena.',
+  },
+  {
+    pregunta: '¿Por que se reemplazo el triangulo del fuego por un tetraedro?',
+    respuesta: 'Porque el triangulo no contemplaba la reaccion quimica que mantiene el fuego activo. El tetraedro incorpora este componente esencial para comprender como se inicia y sostiene la combustion.',
+  },
+  {
+    pregunta: '¿Que fuentes de calor pueden causar un incendio?',
+    respuesta: 'Equipos electricos defectuosos, friccion mecanica, chispas o llamas abiertas, reacciones quimicas espontaneas y superficies calientes sin aislamiento.',
+  },
+  {
+    pregunta: '¿Que rol cumple el oxigeno en la combustion?',
+    respuesta: 'Permite que el combustible reaccione. Su presencia en el aire hace posible que la mayoria de los fuegos se inicien y propaguen. Al reducir su concentracion, el fuego se apaga.',
+  },
+  {
+    pregunta: '¿Que agentes interrumpen la reaccion quimica en cadena?',
+    respuesta: 'El polvo quimico seco y algunos agentes limpios interrumpen la reaccion, especialmente en fuegos de liquidos inflamables o gases.',
+  },
+  {
+    pregunta: '¿Basta con eliminar un solo elemento para apagar el fuego?',
+    respuesta: 'Si. La ausencia de cualquier elemento del tetraedro impide que el fuego se inicie o continue. Los sistemas de extincion estan disenados para actuar sobre uno o mas de estos elementos segun el tipo de riesgo.',
+  },
+  {
+    pregunta: '¿Donde se aplican estos conceptos?',
+    respuesta: 'En todas las estrategias de prevencion y combate de incendios: desde la seleccion de un extintor hasta el diseno de sistemas automaticos para industrias, cocinas, medios de transporte y espacios publicos.',
   },
 ]
 
@@ -104,57 +131,29 @@ export default function OrigenFuegoPage() {
             <span>/</span>
             <span className="text-white">Origen del Fuego</span>
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Origen del Fuego</h1>
-          <p className="text-xl text-white/90 max-w-2xl">
-            Comprender cómo se origina el fuego es el primer paso para poder prevenirlo y controlarlo eficazmente.
+          <p className="text-white/80 text-sm uppercase tracking-wide mb-2">CAPACITACION</p>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">¿Como se origina el fuego?</h1>
+          <p className="text-xl text-white/90 max-w-3xl">
+            El fuego es una reaccion quimica de combustion rapida que libera calor, luz y gases.
+            Comprender como se produce es el primer paso para prevenir incendios y actuar con eficacia en situaciones de riesgo.
           </p>
         </div>
       </section>
 
-      {/* ¿Qué es el Fuego? */}
-      <section className="py-16">
-        <div className="max-w-4xl mx-auto px-4">
-          <div className="text-center mb-12">
-            <p className="text-red-600 font-semibold text-sm uppercase tracking-wide mb-2">CONCEPTO FUNDAMENTAL</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">¿Qué es el Fuego?</h2>
-          </div>
-
-          <div className="bg-gray-50 rounded-xl p-8 mb-8">
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              El fuego es una <strong>reacción química de combustión rápida</strong> que libera calor, luz y gases. Es una oxidación exotérmica que se produce cuando un combustible reacciona con un oxidante (generalmente oxígeno) en presencia de calor.
-            </p>
-
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded-r-lg">
-                <h3 className="font-bold text-green-800 mb-2">Fuego Controlado</h3>
-                <p className="text-green-700 text-sm">
-                  Reacción química controlada con aplicaciones útiles o industriales: cocinar, soldar, calderas, calefacción.
-                </p>
-              </div>
-              <div className="bg-red-50 border-l-4 border-red-500 p-4 rounded-r-lg">
-                <h3 className="font-bold text-red-800 mb-2">Incendio</h3>
-                <p className="text-red-700 text-sm">
-                  Fuego que se propaga de manera no deseada, representando peligro para personas, bienes y medio ambiente.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Tetraedro del Fuego */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
-            <p className="text-red-600 font-semibold text-sm uppercase tracking-wide mb-2">LOS 4 ELEMENTOS</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">El Tetraedro del Fuego</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Antiguamente se hablaba del "triángulo del fuego" (calor, combustible, oxígeno). La ciencia moderna agregó un cuarto elemento: la reacción en cadena.
+            <p className="text-red-600 font-semibold text-sm uppercase tracking-wide mb-2">LOS CUATRO ELEMENTOS FUNDAMENTALES</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">El tetraedro del fuego</h2>
+            <p className="text-gray-600 max-w-3xl mx-auto">
+              Para que el fuego exista y se mantenga, deben estar presentes cuatro elementos.
+              Esta relacion se representa mediante el tetraedro del fuego, una evolucion del antiguo "triangulo del fuego".
             </p>
           </div>
 
           {/* Tetraedro Visual */}
-          <div className="bg-white rounded-xl shadow-lg p-8 mb-12">
+          <div className="bg-gray-50 rounded-xl p-8 mb-12">
             <div className="flex justify-center mb-8">
               <div className="relative w-64 h-64">
                 {/* Tetraedro simplificado */}
@@ -170,7 +169,7 @@ export default function OrigenFuegoPage() {
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-yellow-500 rounded-full flex items-center justify-center text-white text-3xl shadow-lg">
                   ⚡
                 </div>
-                {/* Líneas conectoras */}
+                {/* Lineas conectoras */}
                 <svg className="absolute inset-0 w-full h-full" viewBox="0 0 256 256">
                   <line x1="128" y1="40" x2="40" y2="216" stroke="#ccc" strokeWidth="2" />
                   <line x1="128" y1="40" x2="216" y2="216" stroke="#ccc" strokeWidth="2" />
@@ -189,17 +188,17 @@ export default function OrigenFuegoPage() {
           {/* Elementos detallados */}
           <div className="grid md:grid-cols-2 gap-6">
             {elementosFuego.map((elemento, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden">
+              <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100">
                 <div className={`${elemento.color} p-4 flex items-center gap-4`}>
                   <span className="text-4xl">{elemento.icono}</span>
                   <div>
-                    <h3 className="text-xl font-bold text-white">{elemento.nombre}</h3>
+                    <h3 className="text-xl font-bold text-white">{index + 1}. {elemento.nombre}</h3>
                     <p className="text-white/80 text-sm">{elemento.descripcion}</p>
                   </div>
                 </div>
                 <div className="p-6">
                   <p className="text-gray-600 mb-4">{elemento.detalle}</p>
-                  <p className="text-sm font-semibold text-gray-500 mb-2">Fuentes / Ejemplos:</p>
+                  <p className="text-sm font-semibold text-gray-500 mb-2">Puede generarse por:</p>
                   <ul className="space-y-1">
                     {elemento.fuentes.map((fuente, i) => (
                       <li key={i} className="text-sm text-gray-600 flex items-start gap-2">
@@ -215,75 +214,112 @@ export default function OrigenFuegoPage() {
         </div>
       </section>
 
-      {/* Métodos de Extinción */}
-      <section className="py-16">
-        <div className="max-w-6xl mx-auto px-4">
+      {/* Metodos de Extincion - Tabla */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-5xl mx-auto px-4">
           <div className="text-center mb-12">
-            <p className="text-red-600 font-semibold text-sm uppercase tracking-wide mb-2">PRINCIPIOS DE EXTINCIÓN</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">¿Cómo se Extingue el Fuego?</h2>
+            <p className="text-red-600 font-semibold text-sm uppercase tracking-wide mb-2">PRINCIPIOS DE EXTINCION</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">¿Que ocurre si se elimina uno de los elementos?</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Para extinguir un fuego, debemos eliminar al menos uno de los cuatro elementos del tetraedro.
+              La extincion del fuego se logra al eliminar uno de los componentes del tetraedro.
+              Esto es la base de los distintos metodos de extincion.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
-            {metodosExtincion.map((metodo, index) => (
-              <div key={index} className={`bg-white rounded-xl shadow-lg p-6 border-l-4 ${metodo.color}`}>
-                <div className="flex items-center gap-3 mb-4">
-                  <span className="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-sm font-medium">
-                    Eliminar {metodo.elemento}
-                  </span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-800 mb-2">{metodo.metodo}</h3>
-                <p className="text-gray-600 mb-4">{metodo.descripcion}</p>
-                <p className="text-sm text-gray-500">
-                  <strong>Ejemplos:</strong> {metodo.ejemplos}
-                </p>
-              </div>
-            ))}
+          {/* Tabla de metodos */}
+          <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+            <table className="w-full">
+              <thead>
+                <tr className="bg-gray-800 text-white">
+                  <th className="px-6 py-4 text-left font-semibold">Elemento eliminado</th>
+                  <th className="px-6 py-4 text-left font-semibold">Efecto obtenido</th>
+                  <th className="px-6 py-4 text-left font-semibold">Ejemplo practico</th>
+                </tr>
+              </thead>
+              <tbody>
+                {metodosExtincion.map((metodo, index) => (
+                  <tr key={index} className={`${metodo.color} border-b border-gray-200`}>
+                    <td className="px-6 py-4 font-medium text-gray-800">{metodo.elemento}</td>
+                    <td className="px-6 py-4 text-gray-700">{metodo.efecto}</td>
+                    <td className="px-6 py-4 text-gray-600">{metodo.ejemplo}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
         </div>
       </section>
 
-      {/* Importancia */}
+      {/* Diferencia entre fuego e incendio */}
+      <section className="py-16">
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <p className="text-red-600 font-semibold text-sm uppercase tracking-wide mb-2">CONCEPTO CLAVE</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Diferencia entre fuego e incendio</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Aunque suelen confundirse, fuego e incendio no son lo mismo.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="bg-green-50 border-2 border-green-200 rounded-xl p-8">
+              <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mb-4">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-bold text-green-800 mb-4">Fuego</h3>
+              <p className="text-green-700 leading-relaxed">
+                Es una reaccion quimica <strong>controlada</strong> que puede tener usos utiles o industriales.
+              </p>
+              <p className="text-green-600 mt-4 text-sm">
+                <strong>Ejemplos:</strong> una cocina, una soldadura, una caldera.
+              </p>
+            </div>
+
+            <div className="bg-red-50 border-2 border-red-200 rounded-xl p-8">
+              <div className="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mb-4">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-bold text-red-800 mb-4">Incendio</h3>
+              <p className="text-red-700 leading-relaxed">
+                Es un fuego <strong>fuera de control</strong>, que se propaga de forma no deseada y representa un peligro para las personas, los bienes y el ambiente.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-8 bg-blue-50 border border-blue-200 rounded-xl p-6 text-center">
+            <p className="text-blue-800">
+              <strong>Esta distincion es clave en la formacion en seguridad y prevencion:</strong> lo que se busca evitar no es el fuego en si, sino su manifestacion no controlada.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Preguntas Frecuentes */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4">
-          <div className="bg-blue-50 border border-blue-200 rounded-xl p-8">
-            <h3 className="text-2xl font-bold text-blue-800 mb-4 flex items-center gap-3">
-              <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-              </svg>
-              ¿Por qué es importante conocer esto?
-            </h3>
-            <p className="text-blue-700 leading-relaxed mb-4">
-              Entender el origen del fuego nos permite:
-            </p>
-            <ul className="space-y-2 text-blue-700">
-              <li className="flex items-start gap-2">
-                <svg className="w-5 h-5 text-blue-500 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                </svg>
-                <strong>Prevenir incendios</strong> eliminando posibles fuentes de ignición
-              </li>
-              <li className="flex items-start gap-2">
-                <svg className="w-5 h-5 text-blue-500 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                </svg>
-                <strong>Elegir el extintor correcto</strong> según el tipo de fuego
-              </li>
-              <li className="flex items-start gap-2">
-                <svg className="w-5 h-5 text-blue-500 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                </svg>
-                <strong>Actuar correctamente</strong> en caso de emergencia
-              </li>
-              <li className="flex items-start gap-2">
-                <svg className="w-5 h-5 text-blue-500 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                </svg>
-                <strong>Diseñar sistemas de protección</strong> eficaces para cada situación
-              </li>
-            </ul>
+          <div className="text-center mb-12">
+            <p className="text-red-600 font-semibold text-sm uppercase tracking-wide mb-2">DUDAS COMUNES</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Preguntas frecuentes sobre el origen del fuego</h2>
+          </div>
+
+          <div className="space-y-4">
+            {preguntasFrecuentes.map((faq, index) => (
+              <div key={index} className="bg-white rounded-xl shadow-md overflow-hidden">
+                <div className="p-6">
+                  <h3 className="text-lg font-bold text-gray-800 mb-3 flex items-start gap-3">
+                    <span className="bg-red-100 text-red-600 w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 text-sm font-bold">
+                      {index + 1}
+                    </span>
+                    {faq.pregunta}
+                  </h3>
+                  <p className="text-gray-600 ml-11">{faq.respuesta}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -292,10 +328,10 @@ export default function OrigenFuegoPage() {
       <section className="py-16 bg-gradient-to-r from-orange-600 to-red-600">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
-            Continuá aprendiendo
+            Continua aprendiendo
           </h2>
           <p className="text-white/90 mb-8">
-            Ahora que conocés cómo se origina el fuego, aprendé sobre las diferentes clases de fuego y qué extintor usar en cada caso.
+            Ahora que conoces como se origina el fuego, aprende sobre las diferentes clases de fuego y que extintor usar en cada caso.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
