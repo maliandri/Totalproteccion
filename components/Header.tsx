@@ -49,6 +49,7 @@ const sistemasSubmenu = {
 }
 
 const capacitacionesSubmenu = [
+  { name: 'Realidad Virtual (VR)', href: '/capacitaciones/realidad-virtual', destacado: true },
   { name: 'Origen del Fuego', href: '/capacitaciones/origen-fuego' },
   { name: 'Clases de Fuego', href: '/capacitaciones/clases-fuego' },
   { name: 'Tipos de Matafuegos', href: '/capacitaciones/tipos-matafuegos' },
@@ -213,13 +214,18 @@ export default function Header({ activePage }: HeaderProps) {
               </Link>
               {openDropdown === 'capacitaciones' && (
                 <div className="absolute top-full left-0 bg-white text-gray-800 rounded-lg shadow-xl py-2 min-w-[220px]">
-                  {capacitacionesSubmenu.map((item, index) => (
+                  {capacitacionesSubmenu.map((item: any, index) => (
                     <Link
                       key={index}
                       href={item.href}
-                      className="block px-4 py-2 hover:bg-gray-100 hover:text-red-600 text-sm"
+                      className={`block px-4 py-2 text-sm ${
+                        item.destacado
+                          ? 'bg-gradient-to-r from-blue-900 to-orange-500 text-white font-bold hover:from-blue-800 hover:to-orange-400'
+                          : 'hover:bg-gray-100 hover:text-red-600'
+                      }`}
                     >
                       {item.name}
+                      {item.destacado && <span className="ml-2 text-xs bg-orange-400 px-1.5 py-0.5 rounded">NUEVO</span>}
                     </Link>
                   ))}
                 </div>
@@ -299,9 +305,18 @@ export default function Header({ activePage }: HeaderProps) {
 
             <div className="border-t border-gray-700 pt-2">
               <p className="text-red-500 font-bold py-2">Capacitaciones</p>
-              {capacitacionesSubmenu.map((item, index) => (
-                <Link key={index} href={item.href} className="block pl-4 py-1 text-gray-400 hover:text-white text-sm">
+              {capacitacionesSubmenu.map((item: any, index) => (
+                <Link
+                  key={index}
+                  href={item.href}
+                  className={`block pl-4 py-1 text-sm ${
+                    item.destacado
+                      ? 'text-orange-400 font-bold hover:text-orange-300'
+                      : 'text-gray-400 hover:text-white'
+                  }`}
+                >
                   {item.name}
+                  {item.destacado && <span className="ml-2 text-xs bg-orange-500 text-white px-1.5 py-0.5 rounded">NUEVO</span>}
                 </Link>
               ))}
             </div>
