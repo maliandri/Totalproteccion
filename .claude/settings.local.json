@@ -18,7 +18,10 @@
       "Bash(taskkill:*)",
       "Bash(if exist \"c:\\\\Users\\\\maria\\\\Desktop\\\\totalproteccion\\\\downloaded-content\" rmdir /s /q \"c:\\\\Users\\\\maria\\\\Desktop\\\\totalproteccion\\\\downloaded-content\")",
       "Bash(timeout:*)",
-      "Bash(powershell:*)"
+      "Bash(powershell:*)",
+      "Bash(del \"c:\\\\Users\\\\maria\\\\Desktop\\\\totalproteccion\\\\nul\")",
+      "Bash(findstr:*)",
+      "Bash(copy:*)"
     ]
   }
 }

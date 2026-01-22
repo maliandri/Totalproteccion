@@ -1,20 +1,22 @@
 'use client'
 
-import Image from 'next/image'
 import Link from 'next/link'
+import Image from 'next/image'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
 export default function IngenieriaPage() {
   return (
     <main className="min-h-screen bg-white">
-      <Header activePage="ingenieria" />
+      <Header activePage="sistemas" />
 
       {/* Hero Banner */}
       <section className="relative w-full mt-20 bg-gradient-to-r from-blue-800 to-blue-900 py-16">
         <div className="container mx-auto px-4 md:px-12 lg:px-20">
           <div className="flex items-center gap-2 text-white/80 text-sm mb-4">
             <Link href="/" className="hover:text-white">Inicio</Link>
+            <span>/</span>
+            <Link href="/sistemas" className="hover:text-white">Sistemas</Link>
             <span>/</span>
             <span className="text-white">Ingenieria, Diseno y Auditoria</span>
           </div>
@@ -25,122 +27,112 @@ export default function IngenieriaPage() {
 
       {/* Intro */}
       <section className="py-16">
-        <div className="max-w-4xl mx-auto px-4 text-center">
+        <div className="max-w-4xl mx-auto px-4">
+          <p className="text-lg text-gray-600 leading-relaxed mb-6">
+            En <strong>Total Proteccion</strong> desarrollamos proyectos integrales de ingenieria, diseno y auditoria
+            de sistemas de proteccion contra incendios, garantizando seguridad, eficiencia y cumplimiento normativo
+            en entornos industriales, comerciales y de infraestructura critica.
+          </p>
+          <p className="text-lg text-gray-600 leading-relaxed mb-6">
+            Nuestro equipo de ingenieros especializados aplica los mas altos estandares tecnicos y de calidad,
+            trabajando bajo normas <strong>NFPA, IRAM y FM Global</strong>, y sistemas de gestion certificados
+            segun <strong>ISO 9001:2015</strong>.
+          </p>
           <p className="text-lg text-gray-600 leading-relaxed">
-            Desarrollamos proyectos integrales de <strong>ingenieria, diseno y auditoria</strong> para sistemas de
-            proteccion contra incendios, garantizando seguridad, eficiencia y cumplimiento normativo en
-            instalaciones industriales, comerciales e infraestructura critica.
+            Cada proyecto es concebido de manera personalizada, considerando las caracteristicas constructivas,
+            operativas y de riesgo especificas de cada cliente.
           </p>
         </div>
       </section>
 
-      {/* Servicios Principales */}
+      {/* Ingenieria y Diseno */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-12 text-center">Nuestros Servicios</h2>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* Ingenieria y Diseno */}
-            <div className="bg-white rounded-xl shadow-lg p-8">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
-                <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2" />
-                </svg>
-              </div>
-              <h3 className="text-2xl font-bold mb-4">Ingenieria y Diseno</h3>
-              <p className="text-gray-600 mb-6">
-                Realizamos evaluaciones de riesgo, calculos hidraulicos, planos tecnicos y documentacion
-                integral para todo tipo de sistemas contra incendios.
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl font-bold mb-6">Ingenieria y Diseno</h2>
+              <p className="text-gray-600 mb-6 leading-relaxed">
+                La etapa de ingenieria es el corazon de cada solucion. Realizamos estudios de riesgo,
+                calculos hidraulicos, planos y memorias tecnicas para garantizar que los sistemas de
+                proteccion cumplan con todos los requerimientos de desempeno y confiabilidad.
               </p>
-              <h4 className="font-semibold mb-3 text-gray-800">Soluciones de diseno:</h4>
-              <ul className="space-y-2">
+              <p className="text-gray-600 mb-6 leading-relaxed">
+                Disenamos soluciones adaptadas a cada necesidad, incluyendo:
+              </p>
+              <ul className="space-y-3">
                 {[
-                  'Sistemas de rociadores automaticos',
+                  'Sistemas de rociadores automaticos (sprinklers)',
                   'Redes de hidrantes interiores y exteriores',
                   'Sistemas de espuma (baja, media y alta expansion)',
-                  'Sistemas de deteccion y alarma (convencionales e inteligentes)',
-                  'Sistemas de extincion por gases limpios (FM-200, Inergen, CO2)',
+                  'Deteccion y alarma de incendio (convencional e inteligente)',
+                  'Extincion por gases limpios (FM-200, Inergen, CO2)',
                 ].map((item, index) => (
-                  <li key={index} className="flex items-start text-gray-600">
-                    <svg className="w-5 h-5 mr-2 text-green-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <li key={index} className="flex items-start text-gray-700">
+                    <svg className="w-5 h-5 mr-3 text-blue-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                     {item}
                   </li>
                 ))}
               </ul>
-            </div>
-
-            {/* Auditoria */}
-            <div className="bg-white rounded-xl shadow-lg p-8">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
-                <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
-                </svg>
-              </div>
-              <h3 className="text-2xl font-bold mb-4">Auditoria y Verificacion Tecnica</h3>
-              <p className="text-gray-600 mb-6">
-                Brindamos auditorias tecnicas periodicas y diagnosticos completos para asegurar
-                el correcto funcionamiento de tus sistemas de proteccion.
+              <p className="text-gray-600 mt-6 leading-relaxed">
+                Cada diseno es validado internamente por nuestro departamento tecnico, asegurando precision,
+                trazabilidad y cumplimiento de la normativa vigente.
               </p>
-              <h4 className="font-semibold mb-3 text-gray-800">Nuestras auditorias incluyen:</h4>
-              <ul className="space-y-2">
-                {[
-                  'Evaluacion completa del sistema',
-                  'Verificacion de cumplimiento normativo (NFPA, IRAM)',
-                  'Diagnostico de funcionalidad y eficiencia',
-                  'Informes tecnicos detallados',
-                  'Planes de mejora y recomendaciones',
-                ].map((item, index) => (
-                  <li key={index} className="flex items-start text-gray-600">
-                    <svg className="w-5 h-5 mr-2 text-green-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    {item}
-                  </li>
-                ))}
-              </ul>
+            </div>
+            <div className="rounded-xl overflow-hidden shadow-lg">
+              <Image
+                src="/images/ingenieria-diseno-1.jpg"
+                alt="Ingeniería y diseño de sistemas contra incendios"
+                width={1706}
+                height={1280}
+                className="w-full h-auto object-cover"
+              />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Proceso de Trabajo */}
+      {/* Auditoria */}
       <section className="py-16">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-12 text-center">Nuestro Proceso</h2>
-
-          <div className="grid md:grid-cols-4 gap-6">
-            {[
-              {
-                step: '01',
-                title: 'Relevamiento',
-                description: 'Visita tecnica para evaluar las instalaciones y riesgos especificos',
-              },
-              {
-                step: '02',
-                title: 'Analisis',
-                description: 'Estudio detallado de normativas aplicables y requerimientos tecnicos',
-              },
-              {
-                step: '03',
-                title: 'Diseno',
-                description: 'Elaboracion de planos, calculos y documentacion tecnica completa',
-              },
-              {
-                step: '04',
-                title: 'Entrega',
-                description: 'Presentacion del proyecto con recomendaciones y presupuesto',
-              },
-            ].map((item, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
-                  {item.step}
-                </div>
-                <h3 className="font-bold text-lg mb-2">{item.title}</h3>
-                <p className="text-gray-600 text-sm">{item.description}</p>
-              </div>
-            ))}
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="order-2 md:order-1 rounded-xl overflow-hidden shadow-lg">
+              <Image
+                src="/images/ingenieria-diseno-2.jpg"
+                alt="Auditoría y verificación técnica de sistemas contra incendios"
+                width={1706}
+                height={1280}
+                className="w-full h-auto object-cover"
+              />
+            </div>
+            <div className="order-1 md:order-2">
+              <h2 className="text-3xl font-bold mb-6">Auditoria y Verificacion Tecnica</h2>
+              <p className="text-gray-600 mb-6 leading-relaxed">
+                A lo largo del ciclo de vida de una instalacion, es esencial evaluar periodicamente
+                la eficacia de los sistemas contra incendio. Realizamos auditorias tecnicas y diagnosticos
+                que permiten detectar desvios, optimizar el rendimiento de los equipos y garantizar la
+                conformidad ante inspecciones o auditorias externas.
+              </p>
+              <p className="text-gray-600 mb-6 leading-relaxed">
+                Nuestro servicio de auditoria incluye:
+              </p>
+              <ul className="space-y-3">
+                {[
+                  'Relevamiento completo del sistema existente',
+                  'Verificacion normativa segun NFPA, IRAM y FM Global',
+                  'Diagnostico de funcionamiento y eficiencia',
+                  'Informe tecnico con recomendaciones y plan de mejora',
+                ].map((item, index) => (
+                  <li key={index} className="flex items-start text-gray-700">
+                    <svg className="w-5 h-5 mr-3 text-orange-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -149,33 +141,38 @@ export default function IngenieriaPage() {
       <section className="py-16 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8 text-center">Cumplimiento Normativo</h2>
-          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-            Todos nuestros proyectos cumplen con las normativas nacionales e internacionales mas exigentes
+          <p className="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+            Trabajamos bajo las normas mas exigentes a nivel nacional e internacional,
+            con sistemas de gestion certificados
           </p>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-4 gap-6">
             <div className="bg-white p-6 rounded-xl shadow-md text-center">
-              <div className="w-20 h-20 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-blue-600">NFPA</span>
+              <div className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-xl font-bold text-blue-600">NFPA</span>
               </div>
-              <h3 className="font-bold mb-2">National Fire Protection Association</h3>
-              <p className="text-gray-600 text-sm">Normas internacionales de proteccion contra incendios</p>
+              <h3 className="font-bold mb-2 text-sm">National Fire Protection Association</h3>
             </div>
 
             <div className="bg-white p-6 rounded-xl shadow-md text-center">
-              <div className="w-20 h-20 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-blue-600">IRAM</span>
+              <div className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-xl font-bold text-blue-600">IRAM</span>
               </div>
-              <h3 className="font-bold mb-2">Instituto Argentino de Normalizacion</h3>
-              <p className="text-gray-600 text-sm">Normas nacionales de seguridad y calidad</p>
+              <h3 className="font-bold mb-2 text-sm">Instituto Argentino de Normalizacion</h3>
             </div>
 
             <div className="bg-white p-6 rounded-xl shadow-md text-center">
-              <div className="w-20 h-20 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-xl font-bold text-blue-600">Ley 19587</span>
+              <div className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-lg font-bold text-blue-600">FM Global</span>
               </div>
-              <h3 className="font-bold mb-2">Higiene y Seguridad en el Trabajo</h3>
-              <p className="text-gray-600 text-sm">Legislacion argentina de seguridad laboral</p>
+              <h3 className="font-bold mb-2 text-sm">Factory Mutual Global</h3>
+            </div>
+
+            <div className="bg-white p-6 rounded-xl shadow-md text-center">
+              <div className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-lg font-bold text-blue-600">ISO 9001</span>
+              </div>
+              <h3 className="font-bold mb-2 text-sm">Sistema de Gestion de Calidad</h3>
             </div>
           </div>
         </div>
