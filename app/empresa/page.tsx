@@ -272,32 +272,33 @@ export default function EmpresaPage() {
                 </div>
               </div>
 
-              <a
-                href="https://www.google.com/maps/search/?api=1&query=Bahia+Blanca+608+Neuquen+Argentina"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-red-600 to-red-500 hover:from-red-700 hover:to-red-600 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
-              >
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-                Cómo llegar
-              </a>
             </div>
 
             {/* Mapa embebido */}
-            <div className="h-[400px] rounded-lg overflow-hidden shadow-lg">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3102.5!2d-68.0591!3d-38.9516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x960a33b5c8a8b8b1%3A0x1234567890abcdef!2sBah%C3%ADa%20Blanca%20608%2C%20Neuqu%C3%A9n!5e0!3m2!1ses!2sar!4v1"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Ubicación Total Protección - Bahía Blanca 608, Neuquén"
-              ></iframe>
+            <div className="space-y-4">
+              <div className="h-[400px] rounded-2xl overflow-hidden shadow-lg border border-gray-200">
+                <iframe
+                  src="https://maps.google.com/maps?q=Bahia+Blanca+608,+Neuquen,+Argentina&t=&z=17&ie=UTF8&iwloc=&output=embed"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Ubicación Total Protección - Bahía Blanca 608, Neuquén"
+                ></iframe>
+              </div>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Bahia+Blanca+608,+Neuquen,+Argentina"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-white hover:bg-gray-50 text-gray-700 px-5 py-3 rounded-xl font-medium border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300"
+              >
+                <svg className="w-5 h-5 text-red-500" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                </svg>
+                Abrir en Google Maps
+              </a>
             </div>
           </div>
         </div>
