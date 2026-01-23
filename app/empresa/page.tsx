@@ -153,7 +153,7 @@ export default function EmpresaPage() {
                 <div>
                   <h3 className="text-xl font-bold text-gray-800 mb-2">Atención Comercial</h3>
                   <p className="text-gray-700 text-lg font-medium">Bahía Blanca 608</p>
-                  <p className="text-gray-600">Neuquén Capital</p>
+                  <p className="text-gray-600">Esq. Libertad - Neuquén Capital</p>
                 </div>
               </div>
 
@@ -186,7 +186,7 @@ export default function EmpresaPage() {
               </div>
 
               <a
-                href="https://www.google.com/maps/search/?api=1&query=Neuquen+Capital+Argentina"
+                href="https://www.google.com/maps/search/?api=1&query=Bahia+Blanca+608+Neuquen+Argentina"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded font-semibold transition-colors"
@@ -202,14 +202,14 @@ export default function EmpresaPage() {
             {/* Mapa embebido */}
             <div className="h-[400px] rounded-lg overflow-hidden shadow-lg">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50000!2d-68.06!3d-38.95!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x960a33a50a5b4d4d%3A0x8a7b5b4e5b5c5a5a!2sNeuqu%C3%A9n%2C%20Argentina!5e0!3m2!1ses!2sar!4v1"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3102.5!2d-68.0591!3d-38.9516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x960a33b5c8a8b8b1%3A0x1234567890abcdef!2sBah%C3%ADa%20Blanca%20608%2C%20Neuqu%C3%A9n!5e0!3m2!1ses!2sar!4v1"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Ubicación Total Protección"
+                title="Ubicación Total Protección - Bahía Blanca 608, Neuquén"
               ></iframe>
             </div>
           </div>
