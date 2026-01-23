@@ -142,7 +142,7 @@ export default function EmpresaPage() {
           </h2>
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div className="bg-blue-50 p-8 rounded-lg">
-              {/* Atención Comercial */}
+              {/* Atención Comercial - Bahía Blanca */}
               <div className="flex items-start gap-4 mb-6">
                 <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center flex-shrink-0">
                   <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -153,11 +153,19 @@ export default function EmpresaPage() {
                 <div>
                   <h3 className="text-xl font-bold text-gray-800 mb-2">Atención Comercial</h3>
                   <p className="text-gray-700 text-lg font-medium">Bahía Blanca 608</p>
-                  <p className="text-gray-600">Esq. Libertad - Neuquén Capital</p>
+                  <p className="text-gray-600 mb-2">Esq. Libertad - Neuquén Capital</p>
+                  <div className="text-sm space-y-1">
+                    <a href="mailto:ventas@totalproteccion.com.ar" className="text-blue-600 hover:underline block">
+                      ventas@totalproteccion.com.ar
+                    </a>
+                    <a href="mailto:instalaciones@totalproteccion.com.ar" className="text-blue-600 hover:underline block">
+                      instalaciones@totalproteccion.com.ar <span className="text-gray-500">(Área técnica)</span>
+                    </a>
+                  </div>
                 </div>
               </div>
 
-              {/* Ingeniería de Obras */}
+              {/* Ingeniería de Obras - La Pampa */}
               <div className="flex items-start gap-4 mb-6">
                 <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
                   <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -167,7 +175,30 @@ export default function EmpresaPage() {
                 <div>
                   <h3 className="text-xl font-bold text-gray-800 mb-2">Ingeniería de Obras</h3>
                   <p className="text-gray-700 text-lg font-medium">La Pampa Esq. Fava</p>
-                  <p className="text-gray-600">Neuquén Capital</p>
+                  <p className="text-gray-600 mb-2">Neuquén Capital</p>
+                  <div className="text-sm space-y-1">
+                    <a href="mailto:corporativo@totalproteccion.com.ar" className="text-blue-600 hover:underline block">
+                      corporativo@totalproteccion.com.ar <span className="text-gray-500">(Ventas y cobranzas)</span>
+                    </a>
+                    <a href="mailto:administracion@totalproteccion.com.ar" className="text-blue-600 hover:underline block">
+                      administracion@totalproteccion.com.ar
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              {/* Consultas Generales */}
+              <div className="flex items-start gap-4 mb-6">
+                <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center flex-shrink-0">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-800 mb-2">Consultas Generales</h3>
+                  <a href="mailto:info@totalproteccion.com.ar" className="text-blue-600 hover:underline text-lg">
+                    info@totalproteccion.com.ar
+                  </a>
                 </div>
               </div>
 
