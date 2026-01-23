@@ -178,10 +178,10 @@ export default function EmpresaPage() {
                   <p className="text-gray-600 mb-2">Neuquén Capital</p>
                   <div className="text-sm space-y-1">
                     <a href="mailto:corporativo@totalproteccion.com.ar" className="text-blue-600 hover:underline block">
-                      corporativo@totalproteccion.com.ar <span className="text-gray-500">(Ventas y cobranzas)</span>
+                      corporativo@totalproteccion.com.ar <span className="text-gray-500">(Ventas)</span>
                     </a>
                     <a href="mailto:administracion@totalproteccion.com.ar" className="text-blue-600 hover:underline block">
-                      administracion@totalproteccion.com.ar
+                      administracion@totalproteccion.com.ar <span className="text-gray-500">(Administración y cobranzas)</span>
                     </a>
                   </div>
                 </div>
