@@ -278,7 +278,7 @@ export default function EmpresaPage() {
             <div className="space-y-4">
               <div className="h-[400px] rounded-2xl overflow-hidden shadow-lg border border-gray-200">
                 <iframe
-                  src="https://maps.google.com/maps?q=Bahia+Blanca+608,+Neuquen,+Argentina&t=&z=17&ie=UTF8&iwloc=&output=embed"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3102.8!2d-68.0506263!3d-38.9615935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x960a338aaf715b17%3A0x3cdcaba906d84af0!2sTotal%20protecci%C3%B3n%20sas!5e0!3m2!1ses!2sar!4v1"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
@@ -289,7 +289,7 @@ export default function EmpresaPage() {
                 ></iframe>
               </div>
               <a
-                href="https://www.google.com/maps/search/?api=1&query=Bahia+Blanca+608,+Neuquen,+Argentina"
+                href="https://www.google.com/maps/place/Total+protecci%C3%B3n+sas/@-38.9615935,-68.0506263,17z"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-white hover:bg-gray-50 text-gray-700 px-5 py-3 rounded-xl font-medium border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300"

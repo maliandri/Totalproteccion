@@ -61,8 +61,8 @@ const jsonLd = {
   },
   geo: {
     '@type': 'GeoCoordinates',
-    latitude: -38.9516,
-    longitude: -68.0591,
+    latitude: -38.9615935,
+    longitude: -68.0506263,
   },
   openingHoursSpecification: [
     {
@@ -77,8 +77,8 @@ const jsonLd = {
     '@type': 'GeoCircle',
     geoMidpoint: {
       '@type': 'GeoCoordinates',
-      latitude: -38.9516,
-      longitude: -68.0591,
+      latitude: -38.9615935,
+      longitude: -68.0506263,
     },
     geoRadius: '500000',
   },
