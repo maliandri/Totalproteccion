@@ -299,6 +299,229 @@ export default function EmpresaPage() {
                 </svg>
                 Abrir en Google Maps
               </a>
+
+              {/* Reseñas de Google */}
+              <div className="mt-8">
+                <div className="flex items-center gap-3 mb-6">
+                  <svg className="w-8 h-8" viewBox="0 0 24 24">
+                    <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                    <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                    <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+                    <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+                  </svg>
+                  <div>
+                    <h3 className="text-lg font-bold text-gray-800">Reseñas de Google</h3>
+                    <div className="flex items-center gap-2">
+                      <div className="flex">
+                        {[...Array(5)].map((_, i) => (
+                          <svg key={i} className="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                          </svg>
+                        ))}
+                      </div>
+                      <span className="text-sm text-gray-600 font-medium">5.0 · +100 reseñas</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="space-y-4 max-h-[600px] overflow-y-auto pr-2">
+                  {/* Reseña 1 - Stella Maris Ortega */}
+                  <div className="bg-white rounded-xl p-4 border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <div className="flex items-start gap-3">
+                      <div className="w-10 h-10 bg-gradient-to-br from-pink-500 to-pink-600 rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+                        SM
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center justify-between gap-2">
+                          <p className="font-semibold text-gray-800 truncate">Stella Maris Ortega</p>
+                          <span className="text-xs text-gray-400 flex-shrink-0">Hace un año</span>
+                        </div>
+                        <div className="flex my-1">
+                          {[...Array(5)].map((_, i) => (
+                            <svg key={i} className="w-3 h-3 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                          ))}
+                        </div>
+                        <p className="text-gray-600 text-sm leading-relaxed">Excelente atención, en 15 minutos estuvo todo listo. Muy amable la srta que atiende llamada Carolina; ella me explicó todo respecto a los extinguidores para vehículos y para los domiciliarios.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Reseña 2 - Damian Voltolini */}
+                  <div className="bg-white rounded-xl p-4 border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <div className="flex items-start gap-3">
+                      <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+                        DV
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center justify-between gap-2">
+                          <p className="font-semibold text-gray-800 truncate">Damian Voltolini</p>
+                          <span className="text-xs text-gray-400 flex-shrink-0">Hace 2 años</span>
+                        </div>
+                        <div className="flex my-1">
+                          {[...Array(5)].map((_, i) => (
+                            <svg key={i} className="w-3 h-3 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                          ))}
+                        </div>
+                        <p className="text-gray-600 text-sm leading-relaxed">Son muy confiables y el trabajo lo hacen en 15 minutos. La verdad qué la atención es excelente y hasta te explican bien cuál es el procedimiento a realizar, la verdad muy bueno y muy recomendables porque te lo hacen en el momento!!!</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Reseña 3 - Jorge Calviño */}
+                  <div className="bg-white rounded-xl p-4 border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <div className="flex items-start gap-3">
+                      <div className="w-10 h-10 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+                        JC
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center justify-between gap-2">
+                          <p className="font-semibold text-gray-800 truncate">Jorge Calviño</p>
+                          <span className="text-xs text-gray-400 flex-shrink-0">Hace 4 años</span>
+                        </div>
+                        <div className="flex my-1">
+                          {[...Array(5)].map((_, i) => (
+                            <svg key={i} className="w-3 h-3 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                          ))}
+                        </div>
+                        <p className="text-gray-600 text-sm leading-relaxed">Excelente la atención, la predisposición para solucionar todo mi problema, excelente la garantía que dan sobre el trabajo que realizan.. los recomiendo 100%...muy responsables....</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Reseña 4 - Pablo Nicolás Benitez */}
+                  <div className="bg-white rounded-xl p-4 border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <div className="flex items-start gap-3">
+                      <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+                        PB
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center justify-between gap-2">
+                          <p className="font-semibold text-gray-800 truncate">Pablo Nicolás Benitez</p>
+                          <span className="text-xs text-gray-400 flex-shrink-0">Hace 2 años</span>
+                        </div>
+                        <div className="flex my-1">
+                          {[...Array(5)].map((_, i) => (
+                            <svg key={i} className="w-3 h-3 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                          ))}
+                        </div>
+                        <p className="text-gray-600 text-sm leading-relaxed">Muy buena atención y asesoramiento. Precio accesible y te explican cómo utilizar correctamente el matafuego cosa que no muchos hacen. Super recomendable.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Reseña 5 - Carlos Omar Truenow */}
+                  <div className="bg-white rounded-xl p-4 border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <div className="flex items-start gap-3">
+                      <div className="w-10 h-10 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+                        CT
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center justify-between gap-2">
+                          <p className="font-semibold text-gray-800 truncate">Carlos Omar Truenow</p>
+                          <span className="text-xs text-gray-400 flex-shrink-0">Hace 2 años</span>
+                        </div>
+                        <div className="flex my-1">
+                          {[...Array(5)].map((_, i) => (
+                            <svg key={i} className="w-3 h-3 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                          ))}
+                        </div>
+                        <p className="text-gray-600 text-sm leading-relaxed">Excelente atención, rápido y explican el proceso de recarga anual. Prometen avisar x WhatsApp cerca del vencimiento.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Reseña 6 - Gaston Duchi */}
+                  <div className="bg-white rounded-xl p-4 border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <div className="flex items-start gap-3">
+                      <div className="w-10 h-10 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+                        GD
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center justify-between gap-2">
+                          <p className="font-semibold text-gray-800 truncate">Gaston Duchi</p>
+                          <span className="text-xs text-gray-400 flex-shrink-0">Hace 3 años</span>
+                        </div>
+                        <div className="flex my-1">
+                          {[...Array(5)].map((_, i) => (
+                            <svg key={i} className="w-3 h-3 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                          ))}
+                        </div>
+                        <p className="text-gray-600 text-sm leading-relaxed">Excelente Atención! En 10 minutos te vas con la recarga de tu matafuego no lo tenés que dejar e ir a buscar al otro día. Precios acordes! Totalmente recomendable!</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Reseña 7 - Juan Cruz Pereyra */}
+                  <div className="bg-white rounded-xl p-4 border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <div className="flex items-start gap-3">
+                      <div className="w-10 h-10 bg-gradient-to-br from-teal-500 to-teal-600 rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+                        JP
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center justify-between gap-2">
+                          <p className="font-semibold text-gray-800 truncate">Juan Cruz Pereyra</p>
+                          <span className="text-xs text-gray-400 flex-shrink-0">Hace 4 años</span>
+                        </div>
+                        <div className="flex my-1">
+                          {[...Array(5)].map((_, i) => (
+                            <svg key={i} className="w-3 h-3 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                          ))}
+                        </div>
+                        <p className="text-gray-600 text-sm leading-relaxed">Excelente atención por su dueño, muchos servicios, rapidez, precios bajos, realizan pruebas Hidráulicas de tubos de buceo.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Reseña 8 - Carina Massina */}
+                  <div className="bg-white rounded-xl p-4 border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <div className="flex items-start gap-3">
+                      <div className="w-10 h-10 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+                        CM
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center justify-between gap-2">
+                          <p className="font-semibold text-gray-800 truncate">Carina Massina</p>
+                          <span className="text-xs text-gray-400 flex-shrink-0">Hace un año</span>
+                        </div>
+                        <div className="flex my-1">
+                          {[...Array(5)].map((_, i) => (
+                            <svg key={i} className="w-3 h-3 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                          ))}
+                        </div>
+                        <p className="text-gray-600 text-sm leading-relaxed">Excelente atención y asesoramiento además de muy buen precio. Súper recomendable.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <a
+                  href="https://www.google.com/maps/place/Total+protecci%C3%B3n+sas/@-38.9615935,-68.0506263,17z/data=!4m8!3m7!1s0x960a338aaf715b17:0x3cdcaba906d84af0!8m2!3d-38.9615935!4d-68.0506263!9m1!1b1!16s%2Fg%2F11sw4x9p27"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 mt-4 text-blue-600 hover:text-blue-700 font-medium text-sm transition-colors duration-300 group"
+                >
+                  Ver todas las reseñas en Google
+                  <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
         </div>
