@@ -106,33 +106,31 @@ export default function Home() {
           {slides.map((slide, index) => (
             <div
               key={index}
-              className={`transition-opacity duration-700 ${
-                index === currentSlide ? 'opacity-100 relative' : 'opacity-0 absolute inset-0'
+              className={`absolute inset-0 transition-opacity duration-700 ${
+                index === currentSlide ? 'opacity-100 z-10' : 'opacity-0 z-0'
               }`}
             >
-              <div className="relative w-full h-full">
-                <Image
-                  src={slide.image}
-                  alt={slide.title}
-                  width={1920}
-                  height={1080}
-                  className="w-full h-full object-cover"
-                  priority={index === 0}
-                />
-                {/* Text Overlay */}
-                <div className="absolute inset-0 bg-black/40 flex items-center">
-                  <div className="container mx-auto px-4 md:px-12 lg:px-20">
-                    <div className="max-w-2xl">
-                      <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2 leading-tight">
-                        {slide.title}
-                      </h2>
-                      <p className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-6">
-                        {slide.subtitle}
-                      </p>
-                      <button className="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded font-semibold transition-colors duration-300 text-sm">
-                        Ver más
-                      </button>
-                    </div>
+              <Image
+                src={slide.image}
+                alt={slide.title}
+                fill
+                className="object-cover object-center"
+                priority={index === 0}
+                sizes="100vw"
+              />
+              {/* Text Overlay */}
+              <div className="absolute inset-0 bg-black/40 flex items-center">
+                <div className="container mx-auto px-4 md:px-12 lg:px-20">
+                  <div className="max-w-2xl">
+                    <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2 leading-tight">
+                      {slide.title}
+                    </h2>
+                    <p className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-6">
+                      {slide.subtitle}
+                    </p>
+                    <button className="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded font-semibold transition-colors duration-300 text-sm">
+                      Ver más
+                    </button>
                   </div>
                 </div>
               </div>
