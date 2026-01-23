@@ -140,79 +140,135 @@ export default function EmpresaPage() {
           <h2 className="text-3xl font-bold text-gray-800 text-center mb-12">
             Dónde Estamos
           </h2>
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div className="bg-blue-50 p-8 rounded-lg">
+          <div className="grid md:grid-cols-2 gap-8 items-start">
+            <div className="space-y-6">
               {/* Atención Comercial - Bahía Blanca */}
-              <div className="flex items-start gap-4 mb-6">
-                <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center flex-shrink-0">
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
+              <div className="bg-white rounded-2xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-14 h-14 bg-gradient-to-br from-red-500 to-red-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg">
+                    <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-800">Atención Comercial</h3>
+                    <p className="text-gray-500 text-sm">Sucursal Bahía Blanca</p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-800 mb-2">Atención Comercial</h3>
-                  <p className="text-gray-700 text-lg font-medium">Bahía Blanca 608</p>
-                  <p className="text-gray-600 mb-2">Esq. Libertad - Neuquén Capital</p>
-                  <div className="text-sm space-y-1">
-                    <a href="mailto:ventas@totalproteccion.com.ar" className="text-blue-600 hover:underline block">
-                      ventas@totalproteccion.com.ar
+                <div className="pl-[4.5rem]">
+                  <p className="text-gray-700 font-medium">Bahía Blanca 608</p>
+                  <p className="text-gray-500 text-sm mb-4">Esq. Libertad - Neuquén Capital</p>
+                  <div className="space-y-2">
+                    <a
+                      href="mailto:ventas@totalproteccion.com.ar"
+                      className="group flex items-center gap-3 p-3 rounded-lg bg-gray-50 hover:bg-red-50 border border-transparent hover:border-red-200 transition-all duration-300"
+                    >
+                      <span className="w-8 h-8 bg-red-100 group-hover:bg-red-500 rounded-lg flex items-center justify-center transition-colors duration-300">
+                        <svg className="w-4 h-4 text-red-500 group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                      </span>
+                      <div>
+                        <p className="text-gray-700 group-hover:text-red-600 font-medium transition-colors duration-300">ventas@totalproteccion.com.ar</p>
+                        <p className="text-xs text-gray-400">Ventas</p>
+                      </div>
                     </a>
-                    <a href="mailto:instalaciones@totalproteccion.com.ar" className="text-blue-600 hover:underline block">
-                      instalaciones@totalproteccion.com.ar <span className="text-gray-500">(Área técnica)</span>
+                    <a
+                      href="mailto:instalaciones@totalproteccion.com.ar"
+                      className="group flex items-center gap-3 p-3 rounded-lg bg-gray-50 hover:bg-orange-50 border border-transparent hover:border-orange-200 transition-all duration-300"
+                    >
+                      <span className="w-8 h-8 bg-orange-100 group-hover:bg-orange-500 rounded-lg flex items-center justify-center transition-colors duration-300">
+                        <svg className="w-4 h-4 text-orange-500 group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                      </span>
+                      <div>
+                        <p className="text-gray-700 group-hover:text-orange-600 font-medium transition-colors duration-300">instalaciones@totalproteccion.com.ar</p>
+                        <p className="text-xs text-gray-400">Área técnica / operativa</p>
+                      </div>
                     </a>
                   </div>
                 </div>
               </div>
 
               {/* Ingeniería de Obras - La Pampa */}
-              <div className="flex items-start gap-4 mb-6">
-                <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                  </svg>
+              <div className="bg-white rounded-2xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg">
+                    <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-800">Ingeniería de Obras</h3>
+                    <p className="text-gray-500 text-sm">Sucursal La Pampa</p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-800 mb-2">Ingeniería de Obras</h3>
-                  <p className="text-gray-700 text-lg font-medium">La Pampa Esq. Fava</p>
-                  <p className="text-gray-600 mb-2">Neuquén Capital</p>
-                  <div className="text-sm space-y-1">
-                    <a href="mailto:corporativo@totalproteccion.com.ar" className="text-blue-600 hover:underline block">
-                      corporativo@totalproteccion.com.ar <span className="text-gray-500">(Ventas)</span>
+                <div className="pl-[4.5rem]">
+                  <p className="text-gray-700 font-medium">La Pampa Esq. Fava</p>
+                  <p className="text-gray-500 text-sm mb-4">Neuquén Capital</p>
+                  <div className="space-y-2">
+                    <a
+                      href="mailto:corporativo@totalproteccion.com.ar"
+                      className="group flex items-center gap-3 p-3 rounded-lg bg-gray-50 hover:bg-blue-50 border border-transparent hover:border-blue-200 transition-all duration-300"
+                    >
+                      <span className="w-8 h-8 bg-blue-100 group-hover:bg-blue-500 rounded-lg flex items-center justify-center transition-colors duration-300">
+                        <svg className="w-4 h-4 text-blue-500 group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                      </span>
+                      <div>
+                        <p className="text-gray-700 group-hover:text-blue-600 font-medium transition-colors duration-300">corporativo@totalproteccion.com.ar</p>
+                        <p className="text-xs text-gray-400">Ventas</p>
+                      </div>
                     </a>
-                    <a href="mailto:administracion@totalproteccion.com.ar" className="text-blue-600 hover:underline block">
-                      administracion@totalproteccion.com.ar <span className="text-gray-500">(Administración y cobranzas)</span>
+                    <a
+                      href="mailto:administracion@totalproteccion.com.ar"
+                      className="group flex items-center gap-3 p-3 rounded-lg bg-gray-50 hover:bg-indigo-50 border border-transparent hover:border-indigo-200 transition-all duration-300"
+                    >
+                      <span className="w-8 h-8 bg-indigo-100 group-hover:bg-indigo-500 rounded-lg flex items-center justify-center transition-colors duration-300">
+                        <svg className="w-4 h-4 text-indigo-500 group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                      </span>
+                      <div>
+                        <p className="text-gray-700 group-hover:text-indigo-600 font-medium transition-colors duration-300">administracion@totalproteccion.com.ar</p>
+                        <p className="text-xs text-gray-400">Administración y cobranzas</p>
+                      </div>
                     </a>
                   </div>
                 </div>
               </div>
 
-              {/* Consultas Generales */}
-              <div className="flex items-start gap-4 mb-6">
-                <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center flex-shrink-0">
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-800 mb-2">Consultas Generales</h3>
-                  <a href="mailto:info@totalproteccion.com.ar" className="text-blue-600 hover:underline text-lg">
-                    info@totalproteccion.com.ar
+              {/* Info General y Horarios */}
+              <div className="grid grid-cols-2 gap-4">
+                {/* Consultas Generales */}
+                <div className="bg-white rounded-2xl shadow-lg p-5 border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+                  <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mb-4 shadow-lg">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-sm font-bold text-gray-800 mb-2">Consultas Generales</h3>
+                  <a
+                    href="mailto:info@totalproteccion.com.ar"
+                    className="group flex items-center gap-2 text-purple-600 hover:text-purple-700 font-medium text-sm transition-colors duration-300"
+                  >
+                    <span className="group-hover:translate-x-1 transition-transform duration-300">info@totalproteccion.com.ar</span>
                   </a>
                 </div>
-              </div>
 
-              {/* Horarios */}
-              <div className="flex items-start gap-4 mb-6">
-                <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center flex-shrink-0">
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-800 mb-2">Horario de Atención</h3>
-                  <p className="text-gray-600">Lunes a Viernes: 8:00 - 17:00</p>
-                  <p className="text-gray-600">Sábados: 9:00 - 13:00</p>
+                {/* Horarios */}
+                <div className="bg-white rounded-2xl shadow-lg p-5 border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+                  <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center mb-4 shadow-lg">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-sm font-bold text-gray-800 mb-2">Horarios</h3>
+                  <p className="text-gray-600 text-xs">Lun-Vie: 8:00 - 17:00</p>
+                  <p className="text-gray-600 text-xs">Sáb: 9:00 - 13:00</p>
                 </div>
               </div>
 
@@ -220,7 +276,7 @@ export default function EmpresaPage() {
                 href="https://www.google.com/maps/search/?api=1&query=Bahia+Blanca+608+Neuquen+Argentina"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded font-semibold transition-colors"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-red-600 to-red-500 hover:from-red-700 hover:to-red-600 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
