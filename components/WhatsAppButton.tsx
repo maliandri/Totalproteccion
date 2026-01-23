@@ -1,6 +1,7 @@
 'use client'
 
 import { usePathname } from 'next/navigation'
+import { useState, useEffect } from 'react'
 
 interface WhatsAppButtonProps {
   phoneNumber?: string
@@ -9,6 +10,28 @@ interface WhatsAppButtonProps {
 
 export default function WhatsAppButton({ phoneNumber = '5492995484575', productName }: WhatsAppButtonProps) {
   const pathname = usePathname()
+  const [showButton, setShowButton] = useState(true)
+
+  // Detectar si hay otros botones de WhatsApp en la página
+  useEffect(() => {
+    const checkForWhatsAppLinks = () => {
+      // Buscar enlaces de WhatsApp en el contenido de la página (excluyendo el botón flotante)
+      const whatsappLinks = document.querySelectorAll('a[href*="wa.me"], a[href*="whatsapp.com"]')
+
+      // Filtrar para excluir el botón flotante (que tiene la clase fixed)
+      const pageWhatsappButtons = Array.from(whatsappLinks).filter(link => {
+        return !link.closest('.fixed')
+      })
+
+      // Si hay botones de WhatsApp en el contenido de la página, ocultar el flotante
+      setShowButton(pageWhatsappButtons.length === 0)
+    }
+
+    // Verificar después de que el DOM esté listo
+    const timeoutId = setTimeout(checkForWhatsAppLinks, 100)
+
+    return () => clearTimeout(timeoutId)
+  }, [pathname]) // Re-verificar cuando cambia la ruta
 
   const getContextMessage = () => {
     // Si se pasa un nombre de producto específico, usarlo
@@ -73,6 +96,11 @@ export default function WhatsAppButton({ phoneNumber = '5492995484575', productN
 
   const message = encodeURIComponent(getContextMessage())
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`
+
+  // No mostrar si hay otros botones de WhatsApp en la página
+  if (!showButton) {
+    return null
+  }
 
   return (
     <a
