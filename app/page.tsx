@@ -102,7 +102,7 @@ export default function Home() {
 
       {/* Hero Slider - 600px height like melisam.com */}
       <section className="relative w-full mt-20 bg-black">
-        <div className="relative w-full aspect-[3/4] max-h-[500px] md:aspect-auto md:max-h-none md:h-[500px] lg:h-[600px] overflow-hidden">
+        <div className="relative w-full h-[300px] md:h-[500px] lg:h-[600px] overflow-hidden">
           {slides.map((slide, index) => (
             <div
               key={index}
@@ -114,7 +114,7 @@ export default function Home() {
                 src={slide.image}
                 alt={slide.title}
                 fill
-                className="object-cover object-top md:object-center"
+                className="object-contain md:object-cover object-center"
                 priority={index === 0}
                 sizes="100vw"
               />
