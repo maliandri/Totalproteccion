@@ -114,7 +114,7 @@ export default function Home() {
                 src={slide.image}
                 alt={slide.title}
                 fill
-                className="object-cover object-left md:object-center"
+                className="object-contain md:object-cover object-center"
                 priority={index === 0}
                 sizes="100vw"
               />
