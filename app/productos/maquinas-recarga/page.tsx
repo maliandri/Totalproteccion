@@ -47,8 +47,21 @@ export default function MaquinasRecargaPage() {
             <span>/</span>
             <span className="text-white">Maquinas para Talleres de Recarga</span>
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Maquinas para Talleres</h1>
-          <p className="text-xl text-white/90">Equipamiento profesional para recarga de extintores</p>
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+              <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Maquinas para Talleres</h1>
+              <p className="text-xl text-white/90">Equipamiento profesional para recarga de extintores</p>
+            </div>
+            <div className="hidden md:block">
+              <Image
+                src="/products/maquinaria-recarga-1.jpg"
+                alt="Maquinaria para recarga de extintores"
+                width={500}
+                height={350}
+                className="rounded-lg shadow-xl"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
