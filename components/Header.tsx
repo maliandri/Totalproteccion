@@ -5,12 +5,18 @@ import Link from 'next/link'
 import { useState } from 'react'
 
 const productosSubmenu = [
-  { name: 'Mangueras de Incendio', href: '/productos/mangueras' },
   { name: 'Matafuegos', href: '/productos/matafuegos' },
+  { name: 'Mangueras de Incendio', href: '/productos/mangueras' },
+  { name: 'Gabinetes', href: '/productos/gabinetes' },
   { name: 'Bronceria para Incendio', href: '/productos/bronceria' },
   { name: 'Maquinas para Talleres de Recarga', href: '/productos/maquinas-recarga' },
-  { name: 'Gabinetes', href: '/productos/gabinetes' },
+  { name: 'Unidades de Intervención Rápida', href: '/productos/intervencion-rapida' },
+  { name: 'Sistemas de Dosificación de Espuma', href: '/productos/dosificacion-espuma' },
   { name: 'Espumas', href: '/productos/espumas' },
+  { name: 'Equipamiento Bomberos', href: '/productos/equipamiento-bomberos' },
+  { name: 'Trajes Estructurales', href: '/productos/trajes-estructurales' },
+  { name: 'Equipos de Bombeo', href: '/productos/equipos-bombeo' },
+  { name: 'Válvulas, Postes e Hidrantes', href: '/productos/valvulas-hidrantes' },
 ]
 
 const sistemasSubmenu = {

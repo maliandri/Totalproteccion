@@ -21,11 +21,18 @@ export default function Footer() {
           <div>
             <h4 className="font-bold mb-4">Productos</h4>
             <ul className="space-y-2 text-gray-400 text-sm">
-              <li><Link href="/productos/mangueras" className="hover:text-white transition">Mangueras de Incendio</Link></li>
               <li><Link href="/productos/matafuegos" className="hover:text-white transition">Matafuegos</Link></li>
-              <li><Link href="/productos/bronceria" className="hover:text-white transition">Bronceria para Incendio</Link></li>
+              <li><Link href="/productos/mangueras" className="hover:text-white transition">Mangueras de Incendio</Link></li>
               <li><Link href="/productos/gabinetes" className="hover:text-white transition">Gabinetes</Link></li>
+              <li><Link href="/productos/bronceria" className="hover:text-white transition">Bronceria para Incendio</Link></li>
+              <li><Link href="/productos/maquinas-recarga" className="hover:text-white transition">Maquinas para Recarga</Link></li>
+              <li><Link href="/productos/intervencion-rapida" className="hover:text-white transition">Unidades de Intervención Rápida</Link></li>
+              <li><Link href="/productos/dosificacion-espuma" className="hover:text-white transition">Dosificación de Espuma</Link></li>
               <li><Link href="/productos/espumas" className="hover:text-white transition">Espumas</Link></li>
+              <li><Link href="/productos/equipamiento-bomberos" className="hover:text-white transition">Equipamiento Bomberos</Link></li>
+              <li><Link href="/productos/trajes-estructurales" className="hover:text-white transition">Trajes Estructurales</Link></li>
+              <li><Link href="/productos/equipos-bombeo" className="hover:text-white transition">Equipos de Bombeo</Link></li>
+              <li><Link href="/productos/valvulas-hidrantes" className="hover:text-white transition">Válvulas, Postes e Hidrantes</Link></li>
             </ul>
           </div>
           <div>
