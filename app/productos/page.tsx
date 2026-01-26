@@ -43,9 +43,9 @@ const categories = [
     href: '/productos/intervencion-rapida',
   },
   {
-    name: 'Sistemas de Dosificacion',
+    name: 'Sistemas de Dosificación',
     subtitle: 'de Espuma',
-    image: '/products/cat-producto-Espumas-1-1.jpg',
+    image: '/products/dosificacion-de-espuma.jpg',
     href: '/productos/dosificacion-espuma',
   },
   {

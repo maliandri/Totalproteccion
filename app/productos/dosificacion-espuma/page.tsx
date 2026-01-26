@@ -143,21 +143,70 @@ export default function DosificacionEspumaPage() {
             <span>/</span>
             <Link href="/productos" className="hover:text-white">Productos</Link>
             <span>/</span>
-            <span className="text-white">Sistemas de Dosificacion de Espuma</span>
+            <span className="text-white">Sistemas de Dosificación de Espuma</span>
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Sistemas de Dosificacion de Espuma</h1>
-          <p className="text-xl text-white/90">Equipos especializados para la mezcla y aplicacion de agentes espumantes</p>
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+              <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Sistemas de Dosificación de Espuma</h1>
+              <p className="text-xl text-white/90">Equipos especializados para la mezcla y aplicación de agentes espumantes</p>
+            </div>
+            <div className="hidden md:block">
+              <Image
+                src="/products/dosificacion-de-espuma.jpg"
+                alt="Sistemas de Dosificación de Espuma"
+                width={500}
+                height={350}
+                className="rounded-lg shadow-xl"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Intro */}
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6">Tecnologia en Espuma Contra Incendios</h2>
-          <p className="text-gray-600 text-lg">
-            Los sistemas de dosificacion de espuma son esenciales para la proteccion de instalaciones donde se manejan liquidos inflamables.
-            Nuestros equipos garantizan la mezcla precisa de concentrado de espuma con agua, creando una solucion efectiva para la extincion de incendios de clase B.
+          <h2 className="text-3xl font-bold mb-6">Tecnología en Espuma Contra Incendios</h2>
+          <p className="text-gray-600 text-lg mb-12">
+            Los sistemas de dosificación de espuma son esenciales para la protección de instalaciones donde se manejan líquidos inflamables.
+            Nuestros equipos garantizan la mezcla precisa de concentrado de espuma con agua, creando una solución efectiva para la extinción de incendios de clase B.
           </p>
+
+          {/* Galería de Imágenes */}
+          <div className="grid md:grid-cols-2 gap-4">
+            <div className="relative h-64 rounded-xl overflow-hidden shadow-lg">
+              <Image
+                src="/products/product/dosificacion2-1.jpg"
+                alt="Sistema de dosificación de espuma"
+                fill
+                className="object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className="relative h-64 rounded-xl overflow-hidden shadow-lg">
+              <Image
+                src="/products/product/dosificacion3-1.jpg"
+                alt="Equipos de dosificación"
+                fill
+                className="object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className="relative h-64 rounded-xl overflow-hidden shadow-lg md:col-span-2">
+              <Image
+                src="/products/product/dosificacion4-2048x1008-1-1.jpg"
+                alt="Instalación de sistema de espuma"
+                fill
+                className="object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className="relative h-64 rounded-xl overflow-hidden shadow-lg md:col-span-2">
+              <Image
+                src="/products/product/dosificacion5-2048x915-1-1.jpg"
+                alt="Sistema completo de dosificación"
+                fill
+                className="object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
