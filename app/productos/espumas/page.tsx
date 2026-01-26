@@ -125,8 +125,21 @@ export default function EspumasPage() {
             <span>/</span>
             <span className="text-white">Espumas</span>
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Espumas</h1>
-          <p className="text-xl text-white/90">Agentes espumigenos para combate de incendios</p>
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+              <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Espumas</h1>
+              <p className="text-xl text-white/90">Agentes espumígenos para combate de incendios</p>
+            </div>
+            <div className="hidden md:block">
+              <Image
+                src="/products/espumas-header.png"
+                alt="Espumas contra incendios"
+                width={500}
+                height={350}
+                className="rounded-lg shadow-xl"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
@@ -134,11 +147,55 @@ export default function EspumasPage() {
       <section className="py-12">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6">Agentes Espumígenos Profesionales</h2>
-          <p className="text-gray-600 text-lg">
+          <p className="text-gray-600 text-lg mb-12">
             Ofrecemos una línea completa de espumas contra incendio para diferentes aplicaciones industriales.
             Nuestros agentes espumígenos cumplen con las más exigentes normas internacionales y están diseñados
             para proporcionar máxima eficacia en la extinción de incendios clase A y B.
           </p>
+
+          {/* Galería de Imágenes */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="relative h-48 rounded-xl overflow-hidden shadow-lg">
+              <Image
+                src="/products/product/espumas-contra-incendios-2.png"
+                alt="Espumas contra incendios"
+                fill
+                className="object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className="relative h-48 rounded-xl overflow-hidden shadow-lg">
+              <Image
+                src="/products/product/expansion-espumas-768x444.png"
+                alt="Expansión de espumas"
+                fill
+                className="object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className="relative h-48 rounded-xl overflow-hidden shadow-lg">
+              <Image
+                src="/products/product/espumas-contra-incendios-cuadro.png"
+                alt="Tipos de espumas"
+                fill
+                className="object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className="relative h-48 rounded-xl overflow-hidden shadow-lg lg:col-span-2">
+              <Image
+                src="/products/product/espumas-contra-incendios-768x327.png"
+                alt="Aplicaciones de espumas"
+                fill
+                className="object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className="relative h-48 rounded-xl overflow-hidden shadow-lg">
+              <Image
+                src="/products/product/espumas-contra-incendios-mapa.png"
+                alt="Distribución de espumas"
+                fill
+                className="object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
