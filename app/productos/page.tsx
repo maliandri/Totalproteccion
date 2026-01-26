@@ -63,7 +63,7 @@ const categories = [
   {
     name: 'Trajes',
     subtitle: 'Estructurales',
-    image: '/products/matafuegos-1.jpg',
+    image: '/products/trajes-estructurales-1.jpg',
     href: '/productos/trajes-estructurales',
   },
   {

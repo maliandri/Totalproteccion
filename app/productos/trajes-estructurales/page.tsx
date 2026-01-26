@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
@@ -48,7 +49,7 @@ export default function TrajesEstructuralesPage() {
       <Header activePage="productos" />
 
       {/* Hero Banner */}
-      <section className="relative w-full mt-20 bg-[#1a1a1a] py-20">
+      <section className="relative w-full mt-20 bg-[#1a1a1a] py-16">
         <div className="container mx-auto px-4 md:px-12 lg:px-20">
           <div className="flex items-center gap-2 text-white/80 text-sm mb-4">
             <Link href="/" className="hover:text-white">Inicio</Link>
@@ -57,8 +58,21 @@ export default function TrajesEstructuralesPage() {
             <span>/</span>
             <span className="text-white">Trajes Estructurales</span>
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Trajes Estructurales</h1>
-          <p className="text-xl text-white/90">Protección de alto nivel contra incendios</p>
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+              <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Trajes Estructurales</h1>
+              <p className="text-xl text-white/90">Protección de alto nivel contra incendios</p>
+            </div>
+            <div className="hidden md:block">
+              <Image
+                src="/products/trajes-estructurales-1.jpg"
+                alt="Trajes Estructurales para Bomberos"
+                width={500}
+                height={350}
+                className="rounded-lg shadow-xl"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
