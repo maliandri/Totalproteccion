@@ -125,21 +125,8 @@ export default function EspumasPage() {
             <span>/</span>
             <span className="text-white">Espumas</span>
           </div>
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div>
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Espumas</h1>
-              <p className="text-xl text-white/90">Agentes espumígenos para combate de incendios</p>
-            </div>
-            <div className="hidden md:block">
-              <Image
-                src="/products/espumas-header.png"
-                alt="Espumas contra incendios"
-                width={500}
-                height={350}
-                className="rounded-lg shadow-xl"
-              />
-            </div>
-          </div>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Espumas</h1>
+          <p className="text-xl text-white/90">Agentes espumígenos para combate de incendios</p>
         </div>
       </section>
 
