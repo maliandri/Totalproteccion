@@ -220,6 +220,160 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Productos Section - 12 categorías */}
+      <section id="productos" className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-4">
+            <p className="text-red-600 font-semibold text-sm uppercase tracking-wide">CATEGORÍAS</p>
+          </div>
+          <h2 className="text-4xl font-bold text-center mb-16">Nuestros Productos</h2>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Matafuegos */}
+            <Link href="/productos/matafuegos" className="relative h-80 rounded-2xl overflow-hidden group cursor-pointer bg-gradient-to-br from-gray-900 via-gray-800 to-black">
+              <div className="absolute top-6 left-6 z-10">
+                <h3 className="text-2xl font-bold text-white">Matafuegos</h3>
+              </div>
+              <div className="absolute inset-0 w-full h-full">
+                <Image src="/products/matafuegos-1.jpg" alt="Matafuegos" width={400} height={320} className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300" />
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+            </Link>
+
+            {/* Mangueras */}
+            <Link href="/productos/mangueras" className="relative h-80 rounded-2xl overflow-hidden group cursor-pointer bg-gradient-to-br from-gray-900 via-gray-800 to-black">
+              <div className="absolute top-6 left-6 z-10">
+                <h3 className="text-2xl font-bold text-white">Mangueras</h3>
+                <p className="text-lg text-white/90">de Incendio</p>
+              </div>
+              <div className="absolute inset-0 w-full h-full">
+                <Image src="/products/mangueras-productos-1-1.jpg" alt="Mangueras de Incendio" width={400} height={320} className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300" />
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+            </Link>
+
+            {/* Gabinetes */}
+            <Link href="/productos/gabinetes" className="relative h-80 rounded-2xl overflow-hidden group cursor-pointer bg-gradient-to-br from-gray-900 via-gray-800 to-black">
+              <div className="absolute top-6 left-6 z-10">
+                <h3 className="text-2xl font-bold text-white">Gabinetes</h3>
+                <p className="text-lg text-white/90">para mangueras y extintores</p>
+              </div>
+              <div className="absolute inset-0 w-full h-full">
+                <Image src="/products/gabintenes-mangueras-300x240.jpg" alt="Gabinetes" width={400} height={320} className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300" />
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+            </Link>
+
+            {/* Bronceria */}
+            <Link href="/productos/bronceria" className="relative h-80 rounded-2xl overflow-hidden group cursor-pointer bg-gradient-to-br from-gray-900 via-gray-800 to-black">
+              <div className="absolute top-6 left-6 z-10">
+                <h3 className="text-2xl font-bold text-white">Bronceria</h3>
+                <p className="text-lg text-white/90">para incendio</p>
+              </div>
+              <div className="absolute inset-0 w-full h-full">
+                <Image src="/products/bronceria-1.jpg" alt="Bronceria" width={400} height={320} className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300" />
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+            </Link>
+
+            {/* Maquinas */}
+            <Link href="/productos/maquinas-recarga" className="relative h-80 rounded-2xl overflow-hidden group cursor-pointer bg-gradient-to-br from-gray-900 via-gray-800 to-black">
+              <div className="absolute top-6 left-6 z-10">
+                <h3 className="text-2xl font-bold text-white">Maquinas</h3>
+                <p className="text-lg text-white/90">para talleres de recarga</p>
+              </div>
+              <div className="absolute inset-0 w-full h-full">
+                <Image src="/products/maquinaria-recarga-1.jpg" alt="Maquinas para Recarga" width={400} height={320} className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300" />
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+            </Link>
+
+            {/* Unidades de Intervención Rápida */}
+            <Link href="/productos/intervencion-rapida" className="relative h-80 rounded-2xl overflow-hidden group cursor-pointer bg-gradient-to-br from-gray-900 via-gray-800 to-black">
+              <div className="absolute top-6 left-6 z-10">
+                <h3 className="text-2xl font-bold text-white">Unidades de</h3>
+                <p className="text-lg text-white/90">Intervención Rápida</p>
+              </div>
+              <div className="absolute inset-0 w-full h-full">
+                <Image src="/products/unidades-de-intervencion-rapida.jpg" alt="Unidades de Intervención Rápida" width={400} height={320} className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300" />
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+            </Link>
+
+            {/* Sistemas de Dosificación de Espuma */}
+            <Link href="/productos/dosificacion-espuma" className="relative h-80 rounded-2xl overflow-hidden group cursor-pointer bg-gradient-to-br from-gray-900 via-gray-800 to-black">
+              <div className="absolute top-6 left-6 z-10">
+                <h3 className="text-2xl font-bold text-white">Sistemas de Dosificación</h3>
+                <p className="text-lg text-white/90">de Espuma</p>
+              </div>
+              <div className="absolute inset-0 w-full h-full">
+                <Image src="/products/dosificacion-de-espuma.jpg" alt="Dosificación de Espuma" width={400} height={320} className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300" />
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+            </Link>
+
+            {/* Espumas */}
+            <Link href="/productos/espumas" className="relative h-80 rounded-2xl overflow-hidden group cursor-pointer bg-gradient-to-br from-gray-900 via-gray-800 to-black">
+              <div className="absolute top-6 left-6 z-10">
+                <h3 className="text-2xl font-bold text-white">Espumas</h3>
+              </div>
+              <div className="absolute inset-0 w-full h-full">
+                <Image src="/products/cat-producto-Espumas-1-1.jpg" alt="Espumas" width={400} height={320} className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300" />
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+            </Link>
+
+            {/* Equipamiento Bomberos */}
+            <Link href="/productos/equipamiento-bomberos" className="relative h-80 rounded-2xl overflow-hidden group cursor-pointer bg-gradient-to-br from-gray-900 via-gray-800 to-black">
+              <div className="absolute top-6 left-6 z-10">
+                <h3 className="text-2xl font-bold text-white">Equipamiento</h3>
+                <p className="text-lg text-white/90">Bomberos</p>
+              </div>
+              <div className="absolute inset-0 w-full h-full">
+                <Image src="/products/equipamiento-bomberos.jpg" alt="Equipamiento Bomberos" width={400} height={320} className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300" />
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+            </Link>
+
+            {/* Trajes Estructurales */}
+            <Link href="/productos/trajes-estructurales" className="relative h-80 rounded-2xl overflow-hidden group cursor-pointer bg-gradient-to-br from-gray-900 via-gray-800 to-black">
+              <div className="absolute top-6 left-6 z-10">
+                <h3 className="text-2xl font-bold text-white">Trajes</h3>
+                <p className="text-lg text-white/90">Estructurales</p>
+              </div>
+              <div className="absolute inset-0 w-full h-full">
+                <Image src="/products/trajes-estructurales-1.jpg" alt="Trajes Estructurales" width={400} height={320} className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300" />
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+            </Link>
+
+            {/* Equipos de Bombeo */}
+            <Link href="/productos/equipos-bombeo" className="relative h-80 rounded-2xl overflow-hidden group cursor-pointer bg-gradient-to-br from-gray-900 via-gray-800 to-black">
+              <div className="absolute top-6 left-6 z-10">
+                <h3 className="text-2xl font-bold text-white">Equipos</h3>
+                <p className="text-lg text-white/90">de Bombeo</p>
+              </div>
+              <div className="absolute inset-0 w-full h-full">
+                <Image src="/products/maquinaria-recarga-1.jpg" alt="Equipos de Bombeo" width={400} height={320} className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300" />
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+            </Link>
+
+            {/* Válvulas, Postes e Hidrantes */}
+            <Link href="/productos/valvulas-hidrantes" className="relative h-80 rounded-2xl overflow-hidden group cursor-pointer bg-gradient-to-br from-gray-900 via-gray-800 to-black">
+              <div className="absolute top-6 left-6 z-10">
+                <h3 className="text-2xl font-bold text-white">Válvulas, Postes</h3>
+                <p className="text-lg text-white/90">e Hidrantes</p>
+              </div>
+              <div className="absolute inset-0 w-full h-full">
+                <Image src="/products/bronceria-1.jpg" alt="Válvulas e Hidrantes" width={400} height={320} className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300" />
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* 4 Services Cards con colores */}
       <section className="py-0">
         <div className="grid md:grid-cols-2 lg:grid-cols-4">
@@ -301,151 +455,66 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Productos Section - Estilo melisam.com */}
-      <section id="productos" className="py-20 bg-white">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-4">
-            <p className="text-red-600 font-semibold text-sm uppercase tracking-wide">CATEGORÍAS</p>
-          </div>
-          <h2 className="text-4xl font-bold text-center mb-16">Nuestros Productos</h2>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* Card 1 - Mangueras */}
-            <Link href="/productos/mangueras" className="relative h-80 rounded-2xl overflow-hidden group cursor-pointer bg-gradient-to-br from-gray-900 via-gray-800 to-black">
-              <div className="absolute top-6 left-6 z-10">
-                <h3 className="text-2xl font-bold text-white">Mangueras</h3>
-                <p className="text-lg text-white/90">de Incendio</p>
-              </div>
-              <div className="absolute inset-0 w-full h-full">
-                <Image
-                  src="/products/mangueras-productos-1-1.jpg"
-                  alt="Mangueras de Incendio"
-                  width={300}
-                  height={240}
-                 className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-            </Link>
-
-            {/* Card 2 - Matafuegos */}
-            <Link href="/productos/matafuegos" className="relative h-80 rounded-2xl overflow-hidden group cursor-pointer bg-gradient-to-br from-gray-900 via-gray-800 to-black">
-              <div className="absolute top-6 left-6 z-10">
-                <h3 className="text-2xl font-bold text-white">Matafuegos</h3>
-              </div>
-              <div className="absolute inset-0 w-full h-full">
-                <Image
-                  src="/products/matafuegos-1.jpg"
-                  alt="Matafuegos"
-                  width={300}
-                  height={240}
-                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-            </Link>
-
-            {/* Card 3 - Bronceria */}
-            <Link href="/productos/bronceria" className="relative h-80 rounded-2xl overflow-hidden group cursor-pointer bg-gradient-to-br from-gray-900 via-gray-800 to-black">
-              <div className="absolute top-6 left-6 z-10">
-                <h3 className="text-2xl font-bold text-white">Bronceria</h3>
-                <p className="text-lg text-white/90">para incendio</p>
-              </div>
-              <div className="absolute inset-0 w-full h-full">
-                <Image
-                  src="/products/bronceria-1.jpg"
-                  alt="Bronceria para incendio"
-                  width={300}
-                  height={240}
-                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-            </Link>
-
-            {/* Card 4 - Maquinas para Talleres de Recarga */}
-            <Link href="/productos/maquinas-recarga" className="relative h-80 rounded-2xl overflow-hidden group cursor-pointer bg-gradient-to-br from-gray-900 via-gray-800 to-black">
-              <div className="absolute top-6 left-6 z-10">
-                <h3 className="text-2xl font-bold text-white">Maquinas Para</h3>
-                <p className="text-lg text-white/90">talleres de Recarga</p>
-              </div>
-              <div className="absolute inset-0 w-full h-full">
-                <Image
-                  src="/products/maquinaria-recarga-1.jpg"
-                  alt="Maquinas para Talleres de Recarga"
-                  width={300}
-                  height={240}
-                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-            </Link>
-
-            {/* Card 5 - Gabinetes para Mangueras */}
-            <Link href="/productos/gabinetes" className="relative h-80 rounded-2xl overflow-hidden group cursor-pointer bg-gradient-to-br from-gray-900 via-gray-800 to-black">
-              <div className="absolute top-6 left-6 z-10">
-                <h3 className="text-2xl font-bold text-white">Gabinetes</h3>
-                <p className="text-lg text-white/90">para Mangueras</p>
-              </div>
-              <div className="absolute inset-0 w-full h-full">
-                <Image
-                  src="/products/gabintenes-mangueras-300x240.jpg"
-                  alt="Gabinetes para Mangueras"
-                  width={300}
-                  height={240}
-                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-            </Link>
-
-            {/* Card 6 - Espumas */}
-            <Link href="/productos/espumas" className="relative h-80 rounded-2xl overflow-hidden group cursor-pointer bg-gradient-to-br from-gray-900 via-gray-800 to-black">
-              <div className="absolute top-6 left-6 z-10">
-                <h3 className="text-2xl font-bold text-white">Espumas</h3>
-              </div>
-              <div className="absolute inset-0 w-full h-full">
-                <Image
-                  src="/products/cat-producto-Espumas-1-1.jpg"
-                  alt="Espumas"
-                  width={300}
-                  height={240}
-                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Servicios Section - 3 cols */}
+      {/* Servicios Section - 3 cols con imágenes */}
       <section id="servicios" className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-4">
-            <p className="text-red-600 font-semibold text-sm uppercase tracking-wide">CATEGORÍAS</p>
+            <p className="text-red-600 font-semibold text-sm uppercase tracking-wide">SERVICIOS</p>
           </div>
           <h2 className="text-4xl font-bold text-center mb-16">Nuestros Servicios</h2>
 
           <div className="grid md:grid-cols-3 gap-6">
             {/* Servicio 1 - Extincion */}
-            <Link href="/sistemas" className="relative h-80 rounded-lg overflow-hidden group cursor-pointer bg-red-600">
+            <Link href="/sistemas/extincion" className="relative h-80 rounded-lg overflow-hidden group cursor-pointer">
+              <div className="absolute inset-0 w-full h-full">
+                <Image
+                  src="/products/rociador-uai-325x325-1.png"
+                  alt="Sistemas de Extinción"
+                  width={400}
+                  height={320}
+                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent z-10" />
               <div className="absolute bottom-0 left-0 right-0 p-8 z-20 text-white">
-                <h3 className="text-3xl font-bold mb-2">Sistemas de Extincion</h3>
-                <p className="text-xl mb-4">Contra Incendios</p>
+                <h3 className="text-3xl font-bold mb-2">Sistemas de Extinción</h3>
+                <p className="text-lg">Soluciones basadas en agua, espuma, gases y sistemas especializados</p>
               </div>
             </Link>
 
             {/* Servicio 2 - Deteccion */}
-            <Link href="/sistemas" className="relative h-80 rounded-lg overflow-hidden group cursor-pointer bg-blue-600">
+            <Link href="/sistemas/deteccion" className="relative h-80 rounded-lg overflow-hidden group cursor-pointer">
+              <div className="absolute inset-0 w-full h-full">
+                <Image
+                  src="/products/Sistema-deteccion-incendios-1.jpg"
+                  alt="Sistemas de Detección"
+                  width={400}
+                  height={320}
+                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent z-10" />
               <div className="absolute bottom-0 left-0 right-0 p-8 z-20 text-white">
-                <h3 className="text-3xl font-bold mb-2">Sistemas de Deteccion</h3>
-                <p className="text-xl mb-4">Contra Incendios</p>
+                <h3 className="text-3xl font-bold mb-2">Sistemas de Detección</h3>
+                <p className="text-lg">Sistemas convencionales e inteligentes para máxima eficacia</p>
               </div>
             </Link>
 
             {/* Servicio 3 - Mantenimiento */}
-            <Link href="/sistemas" className="relative h-80 rounded-lg overflow-hidden group cursor-pointer bg-yellow-500">
+            <Link href="/sistemas/mantenimiento" className="relative h-80 rounded-lg overflow-hidden group cursor-pointer">
+              <div className="absolute inset-0 w-full h-full">
+                <Image
+                  src="/products/Servicio-mantenimiento-1.jpg"
+                  alt="Servicio de Mantenimiento"
+                  width={400}
+                  height={320}
+                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent z-10" />
               <div className="absolute bottom-0 left-0 right-0 p-8 z-20 text-white">
-                <h3 className="text-3xl font-bold mb-2">Servicio de</h3>
-                <p className="text-xl mb-4">Mantenimiento</p>
+                <h3 className="text-3xl font-bold mb-2">Mantenimiento</h3>
+                <p className="text-lg">Servicio integral para instalaciones fijas contra incendios</p>
               </div>
             </Link>
           </div>
