@@ -1,0 +1,22 @@
+[
+  {
+    "category": "dispositivos-control",
+    "image": "/products/maquinas/dispositivos-control.png",
+    "title": "Dispositivos de Control y Medición"
+  },
+  {
+    "category": "mantenimiento-mangueras",
+    "image": "/products/maquinas/mantenimiento-mangueras.png",
+    "title": "Mantenimiento PH Mangueras"
+  },
+  {
+    "category": "recarga-alta-presion",
+    "image": "/products/maquinas/recarga-alta-presion.jpg",
+    "title": "Recarga Extintores Alta Presión"
+  },
+  {
+    "category": "recarga-baja-presion",
+    "image": "/products/maquinas/recarga-baja-presion.jpg",
+    "title": "Recarga Extintores Baja Presión"
+  }
+]
