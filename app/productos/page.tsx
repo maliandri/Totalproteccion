@@ -38,8 +38,8 @@ const categories = [
   },
   {
     name: 'Unidades de',
-    subtitle: 'Intervencion Rapida',
-    image: '/products/matafuegos-1.jpg',
+    subtitle: 'Intervención Rápida',
+    image: '/products/unidades-de-intervencion-rapida.jpg',
     href: '/productos/intervencion-rapida',
   },
   {

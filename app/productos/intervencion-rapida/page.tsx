@@ -6,15 +6,15 @@ import Footer from '@/components/Footer'
 const productos = [
   {
     name: 'Jupiter POK',
-    description: 'Unidad de intervencion rapida de alta capacidad con sistema de bombeo integrado. Ideal para respuesta inmediata en emergencias industriales.',
-    features: ['Bomba de alta presion', 'Tanque de agua de 500L', 'Sistema de espuma AFFF', 'Monitor de descarga', 'Mangueras de ataque rapido'],
-    image: '/products/matafuegos-1.jpg',
+    description: 'Unidad de intervención rápida de alta capacidad con sistema de bombeo integrado. Ideal para respuesta inmediata en emergencias industriales.',
+    features: ['Bomba de alta presión', 'Tanque de agua de 500L', 'Sistema de espuma AFFF', 'Monitor de descarga', 'Mangueras de ataque rápido'],
+    image: '/products/product/uirjupiterpok-600x600.jpg',
   },
   {
-    name: 'Unidad de Intervencion Rapida Standard',
-    description: 'Equipo portatil de intervencion rapida para primera respuesta. Compacto y facil de transportar para uso en instalaciones industriales.',
-    features: ['Carrete de manguera de 30m', 'Lanza regulable', 'Valvula de cierre rapido', 'Conexion a red de agua', 'Gabinete protector'],
-    image: '/products/mangueras-productos-1-1.jpg',
+    name: 'Unidad de Intervención Rápida Standard',
+    description: 'Equipo portátil de intervención rápida para primera respuesta. Compacto y fácil de transportar para uso en instalaciones industriales.',
+    features: ['Carrete de manguera de 30m', 'Lanza regulable', 'Válvula de cierre rápido', 'Conexión a red de agua', 'Gabinete protector'],
+    image: '/products/product/unidad-intervencion-rapida-600x600.jpg',
   },
 ]
 
