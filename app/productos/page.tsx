@@ -57,7 +57,7 @@ const categories = [
   {
     name: 'Equipamiento',
     subtitle: 'Bomberos',
-    image: '/products/matafuegos-1.jpg',
+    image: '/products/equipamiento-bomberos.jpg',
     href: '/productos/equipamiento-bomberos',
   },
   {
