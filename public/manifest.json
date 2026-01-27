@@ -1,0 +1,18 @@
+{
+  "name": "Total Protección - Soluciones Contra Incendio",
+  "short_name": "Total Protección",
+  "description": "Distribuidor Oficial Mayorista de Melisam en Argentina. Venta, instalación y mantenimiento de sistemas contra incendios.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1a365d",
+  "orientation": "portrait-primary",
+  "lang": "es-AR",
+  "icons": [
+    {
+      "src": "/logos/Logo-TotalProteccion.png",
+      "sizes": "701x143",
+      "type": "image/png"
+    }
+  ]
+}

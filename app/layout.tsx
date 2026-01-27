@@ -4,33 +4,50 @@ import WhatsAppButton from '@/components/WhatsAppButton'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://totalproteccion.com.ar'),
-  title: 'Total Protección | Soluciones Integrales en Protección Contra Incendio',
-  description: 'Distribuidor Oficial Mayorista de Melisam en Argentina. Venta, instalación y mantenimiento de extintores, detectores de humo, y sistemas automáticos de protección contra incendios.',
-  keywords: 'protección contra incendios, extintores, detectores de humo, sistemas contra incendio, matafuegos, rociadores automáticos, Argentina',
+  title: {
+    default: 'Total Protección | Soluciones Integrales en Protección Contra Incendio',
+    template: '%s | Total Protección',
+  },
+  description: 'Distribuidor Oficial Mayorista de Melisam en Argentina. Venta, instalación y mantenimiento de extintores, detectores de humo, y sistemas automáticos de protección contra incendios en Neuquén y todo el país.',
+  keywords: 'protección contra incendios, extintores, detectores de humo, sistemas contra incendio, matafuegos, rociadores automáticos, mangueras contra incendio, gabinetes para extintores, espumas contra incendio, equipamiento bomberos, Argentina, Neuquén',
   authors: [{ name: 'Total Protección' }],
   creator: 'Total Protección',
   publisher: 'Total Protección',
-  robots: 'index, follow',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  alternates: {
+    canonical: 'https://totalproteccion.com.ar',
+  },
+  manifest: '/manifest.json',
   openGraph: {
     type: 'website',
     locale: 'es_AR',
     url: 'https://totalproteccion.com.ar',
     siteName: 'Total Protección',
     title: 'Total Protección | Soluciones en Protección Contra Incendio',
-    description: 'Distribuidor Oficial Mayorista de Melisam. Sistemas de protección contra incendios en Argentina.',
+    description: 'Distribuidor Oficial Mayorista de Melisam. Sistemas de protección contra incendios en Neuquén, Argentina.',
     images: [
       {
         url: '/logos/Logo-TotalProteccion.png',
         width: 701,
         height: 143,
-        alt: 'Total Protección Logo',
+        alt: 'Total Protección - Protección Contra Incendios',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Total Protección | Protección Contra Incendio',
-    description: 'Sistemas de protección contra incendios en Argentina',
+    description: 'Distribuidor Oficial Mayorista de Melisam. Sistemas de protección contra incendios en Argentina.',
     images: ['/logos/Logo-TotalProteccion.png'],
   },
 }
@@ -87,36 +104,24 @@ const jsonLd = {
   ],
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
-    name: 'Productos contra Incendios',
+    name: 'Productos y Servicios contra Incendios',
     itemListElement: [
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Product',
-          name: 'Extintores / Matafuegos',
-        },
-      },
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Product',
-          name: 'Sistemas de Detección de Incendios',
-        },
-      },
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Product',
-          name: 'Sistemas de Extinción Automática',
-        },
-      },
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: 'Capacitaciones en Seguridad contra Incendios',
-        },
-      },
+      { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Matafuegos / Extintores' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Mangueras de Incendio' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Gabinetes para Mangueras y Extintores' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Broncería para Incendio' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Máquinas para Talleres de Recarga' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Unidades de Intervención Rápida' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Sistemas de Dosificación de Espuma' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Espumas contra Incendio' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Equipamiento para Bomberos' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Trajes Estructurales' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Equipos de Bombeo' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Válvulas, Postes e Hidrantes' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Sistemas de Extinción de Incendios' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Sistemas de Detección de Incendios' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Mantenimiento de Instalaciones Fijas contra Incendios' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Capacitaciones en Seguridad contra Incendios' } },
     ],
   },
 }
