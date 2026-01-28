@@ -52,13 +52,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: '/sistemas/mantenimiento', priority: 0.8, changeFrequency: 'monthly' as const },
     { url: '/sistemas/mantenimiento/instalaciones', priority: 0.7, changeFrequency: 'monthly' as const },
     { url: '/sistemas/mantenimiento/gases', priority: 0.7, changeFrequency: 'monthly' as const },
-    // Rutas legacy (por compatibilidad)
-    { url: '/sistemas/extincion-agua', priority: 0.6, changeFrequency: 'monthly' as const },
-    { url: '/sistemas/extincion-espuma', priority: 0.6, changeFrequency: 'monthly' as const },
-    { url: '/sistemas/extincion-gases', priority: 0.6, changeFrequency: 'monthly' as const },
-    { url: '/sistemas/extincion-cocinas', priority: 0.6, changeFrequency: 'monthly' as const },
-    { url: '/sistemas/deteccion-convencional', priority: 0.6, changeFrequency: 'monthly' as const },
-    { url: '/sistemas/deteccion-inteligente', priority: 0.6, changeFrequency: 'monthly' as const },
   ]
 
   // Capacitaciones

@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     default: 'Total Protección | Soluciones Integrales en Protección Contra Incendio',
     template: '%s | Total Protección',
   },
-  description: 'Distribuidor Oficial Mayorista de Melisam en Argentina. Venta, instalación y mantenimiento de extintores, detectores de humo, y sistemas automáticos de protección contra incendios en Neuquén y todo el país.',
+  description: 'Distribuidor Oficial Mayorista de Melisam. Venta, instalación y mantenimiento de extintores y sistemas contra incendios en Neuquén y Argentina.',
   keywords: 'protección contra incendios, extintores, detectores de humo, sistemas contra incendio, matafuegos, rociadores automáticos, mangueras contra incendio, gabinetes para extintores, espumas contra incendio, equipamiento bomberos, Argentina, Neuquén',
   authors: [{ name: 'Total Protección' }],
   creator: 'Total Protección',

@@ -1,9 +1,9 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Trabajá con Nosotros | Oportunidades Laborales',
-  description: 'Sumate al equipo de Total Protección. Buscamos profesionales apasionados por la seguridad contra incendios. Enviá tu CV y formá parte de nuestro equipo en Neuquén, Argentina.',
-  keywords: 'trabajo Total Protección, empleo Neuquén, recursos humanos, vacantes seguridad incendios, CV, oportunidades laborales, empleo protección contra incendios',
+  title: 'Trabajá con Nosotros',
+  description: 'Sumate al equipo de Total Protección. Oportunidades laborales en seguridad contra incendios en Neuquén, Argentina.',
+  keywords: 'trabajo Total Protección, empleo Neuquén, vacantes seguridad incendios, oportunidades laborales',
   alternates: {
     canonical: 'https://totalproteccion.com.ar/rrhh',
   },
@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     title: 'Trabajá con Nosotros | Total Protección',
     description: 'Oportunidades laborales en Total Protección. Sumate a nuestro equipo en Neuquén.',
     url: 'https://totalproteccion.com.ar/rrhh',
+    images: [{ url: '/logos/Logo-TotalProteccion.png', width: 701, height: 143, alt: 'Total Protección' }],
   },
 }
 

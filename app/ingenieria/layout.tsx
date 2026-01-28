@@ -1,16 +1,17 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Ingeniería y Diseño | Proyectos Llave en Mano contra Incendios',
-  description: 'Servicios de ingeniería contra incendios: diseño de sistemas, auditorías de seguridad, proyectos llave en mano. Cumplimiento normativo NFPA e IRAM. Instalaciones fijas contra incendio en Neuquén y toda Argentina.',
-  keywords: 'ingeniería contra incendios, diseño sistemas incendio, auditoría seguridad, proyectos NFPA, consultoría incendios, instalaciones fijas, llave en mano, Neuquén, Argentina',
+  title: 'Ingeniería contra Incendios',
+  description: 'Ingeniería contra incendios: diseño de sistemas, auditorías y proyectos llave en mano. Cumplimiento NFPA e IRAM en Neuquén y Argentina.',
+  keywords: 'ingeniería contra incendios, diseño sistemas incendio, auditoría seguridad, proyectos NFPA, llave en mano, Neuquén',
   alternates: {
     canonical: 'https://totalproteccion.com.ar/ingenieria',
   },
   openGraph: {
-    title: 'Ingeniería y Diseño | Total Protección',
-    description: 'Diseño y auditoría de sistemas contra incendios. Proyectos llave en mano con cumplimiento normativo NFPA e IRAM.',
+    title: 'Ingeniería contra Incendios | Total Protección',
+    description: 'Diseño y auditoría de sistemas contra incendios. Proyectos llave en mano con normas NFPA e IRAM.',
     url: 'https://totalproteccion.com.ar/ingenieria',
+    images: [{ url: '/logos/Logo-TotalProteccion.png', width: 701, height: 143, alt: 'Total Protección' }],
   },
 }
 

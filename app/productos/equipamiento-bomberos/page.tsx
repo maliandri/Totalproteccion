@@ -56,21 +56,8 @@ export default function EquipamientoBomberosPage() {
             <span>/</span>
             <span className="text-white">Equipamiento para Bomberos</span>
           </div>
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div>
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Equipamiento para Bomberos</h1>
-              <p className="text-xl text-white/90">Equipos de protección personal y herramientas profesionales</p>
-            </div>
-            <div className="hidden md:block">
-              <Image
-                src="/products/equipamiento-bomberos.jpg"
-                alt="Equipamiento para Bomberos"
-                width={500}
-                height={350}
-                className="rounded-lg shadow-xl"
-              />
-            </div>
-          </div>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Equipamiento para Bomberos</h1>
+          <p className="text-xl text-white/90">Equipos de protección personal y herramientas profesionales</p>
         </div>
       </section>
 
