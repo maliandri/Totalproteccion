@@ -41,14 +41,29 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Sistemas contra incendios
   const systemPages = [
     { url: '/sistemas', priority: 0.9, changeFrequency: 'monthly' as const },
+    { url: '/sistemas/montaje', priority: 0.8, changeFrequency: 'monthly' as const },
+    // Extinción
     { url: '/sistemas/extincion', priority: 0.8, changeFrequency: 'monthly' as const },
     { url: '/sistemas/extincion/agua', priority: 0.7, changeFrequency: 'monthly' as const },
     { url: '/sistemas/extincion/espuma', priority: 0.7, changeFrequency: 'monthly' as const },
     { url: '/sistemas/extincion/gases', priority: 0.7, changeFrequency: 'monthly' as const },
     { url: '/sistemas/extincion/cocinas', priority: 0.7, changeFrequency: 'monthly' as const },
+    { url: '/sistemas/extincion/autobuses', priority: 0.7, changeFrequency: 'monthly' as const },
+    { url: '/sistemas/extincion/cabinas-pintura', priority: 0.7, changeFrequency: 'monthly' as const },
+    { url: '/sistemas/extincion/helix', priority: 0.7, changeFrequency: 'monthly' as const },
+    { url: '/sistemas/extincion/vehiculos-pesados', priority: 0.7, changeFrequency: 'monthly' as const },
+    // Detección
     { url: '/sistemas/deteccion', priority: 0.8, changeFrequency: 'monthly' as const },
     { url: '/sistemas/deteccion/convencional', priority: 0.7, changeFrequency: 'monthly' as const },
     { url: '/sistemas/deteccion/inteligente', priority: 0.7, changeFrequency: 'monthly' as const },
+    { url: '/sistemas/deteccion/aspiracion-humo', priority: 0.7, changeFrequency: 'monthly' as const },
+    { url: '/sistemas/deteccion/barreras-infrarrojas', priority: 0.7, changeFrequency: 'monthly' as const },
+    { url: '/sistemas/deteccion/camaras-termicas', priority: 0.7, changeFrequency: 'monthly' as const },
+    { url: '/sistemas/deteccion/elementos-perifericos', priority: 0.7, changeFrequency: 'monthly' as const },
+    { url: '/sistemas/deteccion/gases-explosivos', priority: 0.7, changeFrequency: 'monthly' as const },
+    { url: '/sistemas/deteccion/lineas-comercializadas', priority: 0.7, changeFrequency: 'monthly' as const },
+    { url: '/sistemas/deteccion/subcentrales', priority: 0.7, changeFrequency: 'monthly' as const },
+    // Mantenimiento
     { url: '/sistemas/mantenimiento', priority: 0.8, changeFrequency: 'monthly' as const },
     { url: '/sistemas/mantenimiento/instalaciones', priority: 0.7, changeFrequency: 'monthly' as const },
     { url: '/sistemas/mantenimiento/gases', priority: 0.7, changeFrequency: 'monthly' as const },
