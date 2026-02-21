@@ -206,7 +206,7 @@ export default function EmpresaPage() {
                   </div>
                 </div>
                 <div className="pl-[4.5rem]">
-                  <p className="text-gray-700 font-medium">La Pampa Esq. Fava</p>
+                  <p className="text-gray-700 font-medium">Fava 205</p>
                   <p className="text-gray-500 text-sm mb-4">Neuquén Capital</p>
                   <div className="space-y-2">
                     <a

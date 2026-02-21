@@ -48,10 +48,7 @@ export default function Footer() {
             <h4 className="font-bold mb-4">Contacto</h4>
             <ul className="space-y-2 text-gray-400 text-sm">
               <li>info@totalproteccion.com.ar</li>
-              <li className="font-medium text-gray-300">Atención Comercial</li>
-              <li>Bahía Blanca 608, Neuquén Capital</li>
-              <li className="font-medium text-gray-300 mt-2">Ingeniería de Obras</li>
-              <li>La Pampa Esq. Fava, Neuquén Capital</li>
+              <li>Fava 205, Neuquén Capital</li>
               <li className="mt-2">+54 9 299 548-4575</li>
             </ul>
             <div className="flex gap-3 mt-4">

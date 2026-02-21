@@ -50,7 +50,7 @@ export default function ContactoPage() {
                   </div>
                   <div>
                     <h3 className="font-bold mb-1">Direccion</h3>
-                    <p className="text-gray-600">Buenos Aires, Argentina</p>
+                    <p className="text-gray-600">Fava 205, Neuquén Capital</p>
                   </div>
                 </div>
 

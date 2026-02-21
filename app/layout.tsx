@@ -70,7 +70,7 @@ const jsonLd = {
   email: 'totalprotecciona@gmail.com',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: 'Bahía Blanca 608',
+    streetAddress: 'Fava 205',
     addressLocality: 'Neuquén',
     addressRegion: 'Neuquén',
     postalCode: '8300',
